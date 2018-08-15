@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <title>Easy seedminer B9S CFW</title>
-<link rel="shortcut icon" href="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/seed.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://rawgit.com/dw-hb/3dscfw/guide/seed.ico" type="image/x-icon" />
 
 <head>
   <meta charset="utf-8">
@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
   </script>
-  <script type="text/javascript" src="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/ddaccordion.js">
+  <script type="text/javascript" src="https://rawgit.com/dw-hb/global/js/ddaccordion.js">
     /***********************************************	
      * Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
      * Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
@@ -75,7 +75,7 @@
     }
 
     BODY {
-      background: #151515;
+      background: url(https://rawgit.com/dw-hb/global/img/dandy.png) no-repeat fixed center/cover #151515;
       color: #fff;
       font-family: Myraid Pro, PT Sans, Ubuntu Sans, sans-serif;
     }
@@ -194,22 +194,26 @@
     }
 
     .busy {
-      background: #404005;
+      background: linear-gradient(to bottom, rgba(64, 64, 5, 0.5), rgba(64, 64, 5, 0.5)),
+      url(https://rawgit.com/dw-hb/global/img/bdandy.png) no-repeat fixed center/cover #404005;
       border-top: 2px solid #ff2;
     }
 
     .warn {
-      background: #400505;
+      background: linear-gradient(to bottom, rgba(64, 5, 5, 0.5), rgba(64, 5, 5, 0.5)),
+      url(https://rawgit.com/dw-hb/global/img/wdandy.png) no-repeat fixed center/cover #400505;
       border-top: 2px solid #f22;
     }
 
     .info {
-      background: #050540;
+      background: linear-gradient(to bottom, rgba(5, 5, 64, 0.5), rgba(5, 5, 64, 0.5)),
+      url(https://rawgit.com/dw-hb/global/img/idandy.png) no-repeat fixed center/cover #050540;
       border-top: 2px solid #22f;
     }
 
     .good {
-      background: #054005;
+      background: linear-gradient(to bottom, rgba(5, 64, 5, 0.5), rgba(5, 64, 5, 0.5)),
+      url(https://rawgit.com/dw-hb/global/img/gdandy.png) no-repeat fixed center/cover #054005;
       border-top: 2px solid #2f2;
     }
 
@@ -353,7 +357,7 @@
 
     .guide div.nestins {
       background: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)),
-      url(https://rawgit.com/Hebgbs/Hebgbs.github.io/master/dandy.png) no-repeat fixed center/cover;
+      url(https://rawgit.com/dw-hb/global/img/dandy.png) no-repeat fixed center/cover;
     }
   </style>
 </head>
@@ -549,7 +553,7 @@
         <h3> On the computer</h3>
         <ol>
           <li>Insert the 3DS' SD card into another device which permits you to manipulate files directly (PC, tablet, smartphone etc.).</li>
-          <li><a href="https://hebgbs.github.io/seedkit.zip">Download this archived suite of files. (<code>seedkit.zip</code>)</a>
+          <li><a href="https://rawgit.com/dw-hb/ar/suite/seedkit.zip">Download this archived suite of files. (<code>seedkit.zip</code>)</a>
             <ul>
               <li>All version-agnostic files in this archive were obtained from 3ds.hacks.guide and have already been assembled in the correct fashion for execution on the 3DS.</li>
             </ul>
@@ -633,7 +637,7 @@
             </li>
             <li>Provide your console's id0
               <ul>
-                <li>Your id0 was obtained earlier; you should still have it per instructions in <a href="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/Seedminer-Boot9Strap-CFW-the-easy-way.html?section=2#title2">section 2.</a></li>
+                <li>Your id0 was obtained earlier; you should still have it per instructions in <a href="https://rawgit.com/dw-hb/3dscfw/guide/basic.html?section=2#title2">section 2.</a></li>
               </ul>
             </li>
             <li>Press <i>Start</i> and wait.</li>
@@ -712,7 +716,7 @@
           <li>Execute <code>py -3 seedminer_launcher3.py id0 [id0]</code>.
             <ul>
               <li><i>Example:</i> <code>py -3 seedminer_launcher3.py id0 <span class="hl1">4a5b6c7d8effe0d1c2b3aa9b0c1d2e3f</span></code>.</li>
-              <li>If you are confused about what your id0 is, see <b><a href="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/Seedminer-Boot9Strap-CFW-the-easy-way.html?section=2#title2">section 2</a></b>.
+              <li>If you are confused about what your id0 is, see <b><a href="https://rawgit.com/dw-hb/3dscfw/guide/basic.html?section=2#title2">section 2</a></b>.
             </ul>
           </li>
           <li>Execute <code>py -3 seedminer_launcher3.py gpu</code>.
@@ -730,7 +734,7 @@
       <h2>Section 4 — DSiWare injection</h2>
     </a>
     <div class="ins">
-      <div class="warn msg bdr">None of these steps are of any use without your <code>movable.sed</code>. Acquire it from Bruteforce Movable or make it yourself in seedminer (see <a href="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/Seedminer-Boot9Strap-CFW-the-easy-way.html?section=3#title3">section 3</a>).</div>
+      <div class="warn msg bdr">None of these steps are of any use without your <code>movable.sed</code>. Acquire it from Bruteforce Movable or make it yourself in seedminer (see <a href="https://rawgit.com/dw-hb/3dscfw/guide/basic.html?section=3#title3">section 3</a>).</div>
       <div class="body end">
         <p>These series of steps are necessary for producing your CFW entrypoint. Without it, the additional software on your SD card is rendered useless.</p>
         <h2>At your computer</h2>
@@ -778,7 +782,7 @@
       </a>
       <div class="nestins">
         <div class="info msg">
-          <p class="br">This ia a tree view of the files and directories given from <code>seedkit.zip</code> after they had been extracted, excluding <code>Nintendo 3DS</code> and other extraneous directories: If you do not have this archive, get it from <a href="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/Seedminer-Boot9Strap-CFW-the-easy-way.html?section=2#title2">section 2</a>.</p>
+          <p class="br">This ia a tree view of the files and directories given from <code>seedkit.zip</code> after they had been extracted, excluding <code>Nintendo 3DS</code> and other extraneous directories: If you do not have this archive, get it from <a href="https://rawgit.com/dw-hb/3dscfw/guide/basic.html?section=2#title2">section 2</a>.</p>
           <p class="br"><i>All operations shown later will <u>fail</u> if files from <code>seedkit.zip</code> are not arranged as shown <u>at the root directory of your SD card.</u></i></p>
           <div class="inset">
           <pre>[Your SD card]
@@ -823,7 +827,7 @@ GodMode9.firm</pre>
       </div>
       <div class="good msg bdr br">If having followed instructions elsewhere which mandated creation of a <code>boot9strap</code> directory, you can delete that prior to extracting <code>seedkit.zip</code> because b9stool can use contents from SD card root.</div>
       <div class="info msg bdr br">Instructions below shamelessly ripped off from <a href="https://jisagi.github.io/SeedminerGuide/injection/#section4">Jisagi's seedminer guide</a></div>
-      <div class="warn msg bdr">These instructions will fail without following <a href="https://rawgit.com/Hebgbs/Hebgbs.github.io/master/Seedminer-Boot9Strap-CFW-the-easy-way.html?section=4#title4">section 4</a>.</div>
+      <div class="warn msg bdr">These instructions will fail without following <a href="https://rawgit.com/dw-hb/3dscfw/guide/basic.html?section=4#title4">section 4</a>.</div>
       <div class="body">
         <h3 class="nobr">How to install Boot9Strap, Luma3DS and GodMode9</h3>
         <p class="br">
@@ -1112,6 +1116,7 @@ GodMode9.firm</pre>
   </div> <br> <small class="ctr">
     <p>Accordion script by Dynamic Drive.</p>
     <p>Guide by Heebeejeebees.</p>
+	<p>Background image by Catty Kitty Designs.</p>
   </small>
 </body>
 
