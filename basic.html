@@ -152,25 +152,31 @@
     .body A {
       color: white;
       text-shadow: 0px 0px 6px #333,
-      0px 0px 6px #333;
+                   0px 0px 6px #333;
     }
 
     .warn A {
       color: #f22;
       text-shadow: 0px 0px 6px #400505,
-      0px 0px 6px #400505;
+                   0px 0px 6px #400505;
     }
 
     .info A {
       color: #22f;
       text-shadow: 0px 0px 6px #050540,
-      0px 0px 6px #050540
+                   0px 0px 6px #050540
     }
 
     .good A {
       color: #2f2;
       text-shadow: 0px 0px 6px #054005,
-      0px 0px 6px #054005;
+                   0px 0px 6px #054005;
+    }
+
+    .busy A {
+      color: #ff2;
+      text-shadow: 0px 0px 6px #404005,
+                   0px 0px 6px #404005;
     }
 
     .msg {
@@ -187,12 +193,16 @@
       margin: 0px;
     }
 
-    .busy,
-    .warn,
-    .info,
-    .good {
+    .busy:not(.end),
+    .warn:not(.end),
+    .info:not(.end),
+    .good:not(.end) {
       font-weight: bold;
     }
+	
+	.end {
+	  font-weight: normal;
+	}
 
     .busy {
       background: #404005;
@@ -366,35 +376,17 @@
   <div class="guide">
     <div class="busy msg bdr br end">
       <h2 class="ctr">This guide being updated as more information about 11.8 is released!</h2>
-      <p class="br">As time goes on and more dedicated people are figuring out solutions to restore certain functionality 11.8 breaks, this guide will also be updated! Check back every so often for new details! Latest changes:</p>
+      <p class="br">Latest changes:</p>
       <ul class="txtli">
-        <li>A fresh new look!</li>
-        <li>Modification of <code>seedkit.zip</code>:
-          <ul class="intl">
-            <li>Removal of <code>boot.nds</code> compatible with 11.7.</li>
-            <li>Modification of section 2 including information about obtaining <code>boot.nds</code> for different firmware.</li>
-          </ul>
-        </li>
-        <li>Modification of section 3 to suggest a functional web miner.</li>
-        <li>Modification of messages before section 6:
-          <ul class="intl">
-            <li>Moved banned topics warning from before section 6 to inside section 6.</li>
-            <li>Added firmware version incompatibility warning.</li>
-          </ul>
-        </li>
-        <li>Addition of a new section:
-          <ul class="intl">
-            <li>Section 7 becomes <i>Migration and backup</i>
-              <ul>
-                <li><i class="hl3">Due to recent events this section is left incomplete.</i></li>
-              </ul>
-            </li>
-            <li><i>3DS operation from PC</i> moves to section 8.</li>
-          </ul>
-        </li>
+        <li>
+		  Changed link of b9stool for 11.8; 4.0.2 is no longer available, providing 5.0.0 instead.
+		  <ul>
+		    <li><span class="hl3">The `boot.nds` file is no longer provided directly; it must be extracted with an archive manager.</span></li>
+		</li>
       </ul>
+	  <h3 class="ctr">titledb.com's security certificate has expired. Due to this, <b>Preface and Summary<b> contains "Broken" images. To fix this, visit <a href="https://api.titledb.com">https://api.titledb.com</a> and create a permanent security exception as all images come from this domain. After, reload and all images shown can then be used for your reference.</h3>
     </div>
-    <div class="good msg bdr br ctr">
+    <div class="good msg bdr br ctr end">
       <h2>Some people may find this guide confusing to follow.</h2>
       <p class="br">I get it. If you are doing this stuff for the first time, you may be uncertain about what you are doing, despite the content laid out before you optimized to waste as little of your time and bandwidth as possible. If you are confused, ask the person who provided this guide to you for additional consultation and advice.</p>
       <p>Much confusion can be had by "Skimming" the contents of this guide. <i>Do not "Skim", "Scan" or otherwise half-read contents of this guide.</i></p>
@@ -564,12 +556,14 @@
                 <li class="txtli"><code>11.4 - 11.7:</code> <a href="https://github.com/zoogie/b9sTool/releases/download/v4.0.0/boot.nds">B9STool v4.0.0</a>
 				  <ul class="intl">
 				    <li>If you already have a compatible DSiWare title, <i class="hl3">do not update the system firmware!</i> Any future instructions to update <i>should be ignored.</i></li>
+					<li><span class="hl3">This file should be saved directly to your console's SD card.</span></li>
 			      </ul>
 				</li>
-                <li class="txtli"><code>11.8 onward:</code> <a href="https://github.com/zoogie/b9sTool/releases/download/v4.0.2/boot.nds">B9STool v4.0.2</a>
+                <li class="txtli"><code>11.8 onward:</code> <a href="https://github.com/zoogie/b9sTool/releases/download/v5.0.0/release_5.0.0.zip">B9STool v5.0.0</a>
                   <ul class="intl">
-                    <li><span class="hl3">v4.0.2 is <i>not</i> compatible with 11.7 or less!</span></li>
+                    <li><span class="hl3">v5.0.0 is <i>not</i> compatible with 11.7 or less!</span></li>
 					<li>If you didn't have a compatible DSiWare title already, you may be forced to update the system firmware which makes this the <i>only</i> option.</li>
+					<li><span class="hl3"><b>This is an archive.</b> Extract this to the root of your console's SD card.</span></li>
                   </ul>
                 </li>
               </ul>
@@ -778,7 +772,7 @@
         <h3>Expand for a final reminder about file arrangement.</h3>
       </a>
       <div class="nestins">
-        <div class="info msg">
+        <div class="info msg end">
           <p class="br">This ia a tree view of the files and directories given from <code>seedkit.zip</code> after they had been extracted, excluding <code>Nintendo 3DS</code> and other extraneous directories: If you do not have this archive, get it from <a href="https://rawgit.com/dw-hb/3dscfw/guide/basic.html?section=2#title2">section 2</a>.</p>
           <p class="br"><i>All operations shown later will <u>fail</u> if files from <code>seedkit.zip</code> are not arranged as shown <u>at the root directory of your SD card.</u></i></p>
           <div class="inset">
@@ -880,7 +874,7 @@ GodMode9.firm</pre>
     </a>
     <div class="ins">
       <div class="warn msg bdr br">Certain circles do not dare discuss piracy. As some places may ban you for talking about it, <span class="hl3">don't bring up freeShop.</span> <i>Ever.</i></div>
-      <div class="warn msg bdr hl3">Fiemware 11.8 breaks use of this tool! <u>Do not update from anything less</u> if you want to use freeShop!</div>
+      <div class="warn msg bdr hl3">Because of recent changes to Nintnedo's ticket validation, freeShop only works best with DLC and updates, and even then nothing is guaranteed.</div>
       <div class="body end">
         <p>There is some other cool software you can install via FBI's TitleDB menu. As there is no additional preparation necessary, This section should be fairly straight-forward, especially compared with the long-winded process which permits the installation of such software. When finished, you will have <b>FTPD</b> and <b>Freeshop</b> made available to you. There is a <b>lot</b> of other software via TitleDB but the two mentioned are what may be considered most useful for games, patches and remote interaction with the SD card.</p>
       </div>
