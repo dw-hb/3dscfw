@@ -1,28 +1,230 @@
 <!DOCTYPE html>
 <!-- saved from url=(0029)http://steelminer.jisagi.net/ -->
-<html data-crowd-bypass-opt-in=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Steelminer</title><meta name="description" content="Steelminer: Steelhax combined with Seedminer"><meta property="og:image" content="https://i.imgur.com/CVSu1zc.png"><link rel="stylesheet" href="./Steelminer_files/bootstrap.min.css"><link rel="stylesheet" href="./Steelminer_files/style.css"><script src="./Steelminer_files/jquery-3.3.1.min.js.download"></script><script src="./Steelminer_files/bootstrap.bundle.min.js.download"></script><script src="./Steelminer_files/main.js.download"></script><script src="./Steelminer_files/fileAccess.js.download"></script><script src="./Steelminer_files/util.js.download"></script><script src="./Steelminer_files/injection.js.download"></script><script src="./Steelminer_files/msed.js.download"></script><!--script(src='/javascripts/startup.js')--></head><body><div class="row"><div class="col-lg-2"></div><div class="col-lg-8"><h1 class="mt-5 h1-page-title text-center">Steelminer</h1><h2>What is this?</h2><p>Steelhax is an entrypoint for the 3DS and combined with Seedminer it's a primary one.
-It enables free Homebrew access <strong>not Custom Firmware (CFW)</strong>. The uses are pretty limited, since many homebrew apps don't work on any *hax entrypoint.
-There is a list at the bottom of the with working apps.<br>
-If you want a full custom firmware for free, finish the guide below and then continue with
-<a class="a-table" target="_blank" href="https://jisagi.github.io/FrogminerGuide/">Frogminer</a>.<br>
-Other possible ways to get full custom firware are
-<a class="a-table" target="_blank" href="https://jisagi.github.io/SeedminerGuide/">Seedminer</a> or
-<a class="a-table" target="_blank" href="https://3ds.hacks.guide/ntrboot">ntrboot</a>.</p><h2>What do I need?</h2><ul><li>A legal copy of "Steel Diver: Sub Wars"</li></ul><h2>FAQ</h2><ul><li><strong>Q:</strong> Can I launch FBI with steelhax? <strong>A:</strong> No</li><li><strong>Q:</strong> Can I install/play game backups with this? <strong>A:</strong> No</li><!--li #[u #[strong Q:] Seedhelper is down or not working. What do i do? #[strong A:] You wait for it being back up!]--><li><strong>Q:</strong> I found this guide on youtube and something doesn't work. What do i do? <strong>A:</strong> You go message that youtuber and ask them for help.</li></ul><div class="alert alert-danger" style="color:#d72828;"><strong>If you already installed Luma3DS you can ignore this guide, because it will not work. This is only for non cfw users</strong></div><hr><h2 id="Section_I">Section I - Getting your ID0</h2><ol><li>Power off your 3DS</li><li>Insert your SD Card into your PC and open the <code>Nintendo 3DS</code> folder</li><li>You will now find one or multiple folders with 32-character-long names</li><li>If you only have one then skip this step</li><ul><li>Navigate one folder up so you can see the <code>Nintendo 3DS</code> folder again</li><li>Rename your <code>Nintendo 3DS</code> folder to <code>Nintendo BACKUP</code> by right-clicking it and selecting "Rename"</li><li>Put the SD Card back into your 3DS and power it on</li><li><strong>Wait</strong> for it to generate its data on your SD Card</li><li>Power off your 3DS and insert the SD Card back into your PC</li><li>Open the <code>Nintendo 3DS</code> folder</li></ul><li>You should now see one folder with a 32-character-long name (see picture below).
-<br><strong>The name of this folder is your ID0</strong></li><img src="./Steelminer_files/1AeECFF.png"><li>If you did <strong>NOT</strong> skip step 4, delete the <code>Nintendo 3DS</code> folder and rename the <code>Nintendo BACKUP</code> folder back to <code>Nintendo 3DS</code></li></ol><hr><h2 id="Section_II">Section II - Getting your movable.sed</h2><p>Choose <strong>one</strong> of the following options. If one doesn't work, try the other one.</p><h3>The automated way</h3><ol><li>Open <a class="a-table" target="_blank" href="https://bruteforcemovable.com/">this website</a></li><li>Input your Friend Code and your ID0</li><li>Click "Go" and then add the displayed Friend Code on your system</li><li>Wait until it finishes retrieving your <code>movable_part1.sed</code></li><li>When finished click "Continue" to let one of the online miners brute-force your <code>movable.sed</code></li></ol><h3>The manual way</h3><ol><li><a class="a-table" target="_blank" href="https://discord.gg/C29hYvh">Join our discord server</a>
-and ask in our 3ds-assistance channels if someone has the time to help you get the <code>movable_part1.sed</code>.
-Tell them you are going to brute-force yourself. You might receive a file named <code>XX_XXXX-XXXX-XXXX_part1.sed</code>,
-just rename it to <code>movable_part1.sed</code>. Please have your Friend Code ready when asking for help!</li><li>Open a command prompt by typing <code>cmd</code> into the start menu search bar and pressing Enter</li><li>In the new black window, type <code>py -3 --version</code></li><ul><li>If it reports <code>Python 3.x.x</code>, you have Python 3</li><li>If it complains, you either have Python 2 or no Python at all</li><ul><li>Go to <a class="a-table" target="_blank" href="https://www.python.org/downloads/">python.org</a> and download and
-install the most recent Python 3 version, then redo this part to confirm it worked</li></ul></ul><li>Download the latest release of Seedminer <a class="a-table" target="_blank" href="https://github.com/zoogie/seedminer/releases">from here</a>
-and extract the zip file</li><li>Move <code>movable_part1.sed</code> into the <code>seedminer</code> folder you just extracted, where the <code>seedminer_launcher3.py</code> script is</li><li>Hold SHIFT and right click on an empty space in the <code>seedminer</code> folder, then select <code>Open PowerShell window here</code> or
-<code>Open command window here</code></li><li>Type <code>py -3 seedminer_launcher3.py update-db</code> into the new window</li><li>Wait for it to finish, then type <code>py -3 seedminer_launcher3.py id0 YOUR ID0 HERE</code> - replace <code>YOUR ID0 HERE</code>
-with your ID0 you got in Section I</li><ul><li><strong>Note:</strong> If you downloaded your <code>movable_part1.sed</code> from seedhelper then your ID0 is already added.
-You should recieve the error "improper ID0 length or already in file"</li></ul><li>Depending on what you want to use type the following:</li><ul><li>GPU <code>py -3 seedminer_launcher3.py gpu</code> (preferred, use CPU if you only have integrated graphics!)</li><li>CPU <code>py -3 seedminer_launcher3.py cpu</code> <strong>(This can take a while!)</strong></li></ul><p><strong>Troubleshoot:</strong><br>
-If you encounter "bfcl is not recognized as an internal or external command [...]" then your anti-virus may have removed bfcl.exe.
-Disable it temporarily and re-extract the files from the seedminer archive<br>
-If it only generated a <code>movable_part2.sed</code> with no other error or action, then update your graphics card drivers and try again</p><li>After it finishes, you will have a <code>movable.sed</code></li></ol><hr><h2 id="Section_III">Section III - Creating the Save File</h2><ol><li>Upload your <code>movable.sed</code> and select your region below</li><li>Click "Start!" and wait for your savefile to download</li><ul><li><strong>Recommended browsers are Chrome &amp; Firefox, others might not work</strong></li></ul></ol><form action="javascript:start();" id="uploadForm" ref="uploadForm" enctype="multipart/form-data"><div class="form-group"><label>movable.sed:</label><input class="form-control form-control-movable" id="movable" type="file" accept=".sed"></div><div class="form-group"><label>Region:</label><select class="form-control form-control-region" id="region" style="width: 150px"><option value="00040000000d7d00" selected="">USA</option><option value="00040000000d7e00">Europe</option><option value="00040000000d7c00">Japan</option></select></div><button class="btn btn-primary btn-start" type="submit">Start!</button></form><p id="p-error"></p><hr><h2 id="Section_IV">Section IV - Finalizing</h2><ol><li>Download the
-<a class="a-table" target="_blank" href="https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar">Steelhax Installer</a>
-archive</li><li>Download the <a class="a-table" target="_blank" href="http://smealum.github.io/3ds/#otherapp">otherapp payload</a>
-corresponding to your system version and rename it to <code>payload.bin</code></li><li>Download the
-<a class="a-table" target="_blank" href="https://github.com/fincs/new-hbmenu/releases/download/v2.0.0/boot.3dsx">latest Version of the Homebrew Menu</a></li><li>Extract the <code>steelhax-installer.rar</code> and copy the <code>steelhax</code> <strong>folder</strong> directly to your SD Card (not into any other folder!)</li><li>Copy <code>payload.bin</code> into the <code>steelhax</code> folder on your SD Card</li><li>Copy <code>boot.3dsx</code> (Homebrew Menu) to the root of your SD Card</li><li>Start the game once and select a Mii to initialize the save. <strong>Do not update the game when asked!</strong></li><ul><li>If you already updated the game, delete the Update Data in the System Settings</li></ul><li>Close the game, power off your 3DS and insert your SD Card into your PC</li><li>Replace the existing save in <code>Nintendo 3DS &gt; ID0 &gt; ID1 &gt; title &gt; 00040000 &gt; regionId &gt; data</code> (regionId see below) with the one you
-got in Section II</li><ul><li>US: <code>000d7d00</code></li><li>Europe: <code>000d7e00</code></li><li>Japan: <code>000d7c00</code></li></ul><li>Create a folder called <code>3ds</code> on the root of your SD Card</li><ul><li>You can add your .3dsx apps to this folder later</li></ul><li>Reinsert the SD Card into your 3DS and power it on</li><li>Start the game</li></ol><div class="p-box">You should now boot into the Homebrew Menu. If not, check the Troubleshooting below or ask on our <a class="a-table" target="_blank" href="https://discord.gg/C29hYvh">Discord Server</a></div><hr><h2 id="Troubleshooting">Troubleshooting</h2><ul><li><h5>I get a solid yellow screen</h5></li><p>Relaunch the game. It might take a few tries (You might need to force shut off the system be holding the power button)</p><li><h5>I get a solid red screen</h5></li><p>The <code>boot.3dsx</code> is missing. Download it <a class="a-table" target="_blank" href="https://github.com/fincs/new-hbmenu/releases/download/v2.0.0/boot.3dsx">here</a> and put it on the root of your SD Card</p><li><h5>I get a solid black screen</h5></li><p>You already have Luma3DS. Check by booting while holding (Select)</p><li><h5>The game crashed with an error message</h5></li><p>Check if you have the <code>/steelhax/</code> folder and the correct <code>payload.bin</code></p><li><h5>The game crashed without an error message</h5></li><p>The <code>payload.bin</code> inside the <code>/steelhax/</code> folder has the wrong system version (old or new 3/2ds)</p><li><h5>The game booted normally</h5></li><p>You did not patch or overwrite the original savefile.</p></ul><hr><h2 id="Apps">Usable Applications</h2><p>There is no guarantee all of the listed apps work on all systems!</p><ul><li><a class="a-table" href="http://steelminer.jisagi.net/files/JKSM.zip">JKSM</a> for save import/export</li><li><a class="a-table" href="https://github.com/BernardoGiordano/PKSM/releases">PKSM</a> for Pokemon save editing
-(extract the <code>hax</code> folder from the <code>PKSM.zip</code> into your <code>3ds</code> folder on your SD Card)</li><li><a class="a-table" href="https://github.com/astronautlevel2/Anemone3DS/releases">Anemone3DS</a> for custom themes (the .3dsx file)</li><li>Emulators (not all games work and performance may vary)</li><ul><li><a class="a-table" href="http://steelminer.jisagi.net/files/Snes9x_3ds.zip">snes_9x</a></li><li><a class="a-table" href="http://steelminer.jisagi.net/files/mGBA.zip">mgba</a></li><li><a class="a-table" href="http://steelminer.jisagi.net/files/GameYob.zip">GameYob</a></li><li><a class="a-table" href="http://steelminer.jisagi.net/files/VirtuaNES.zip">VirtuaNES</a></li></ul></ul><hr><h2 id="Credits">Credits</h2><ul><li><a class="a-table" target="_blank" href="https://github.com/zoogie">zoogie</a> for seedminer</li><li><a class="a-table" target="_blank" href="https://github.com/VegaRoXas">VegaRoXas</a> for steelhax</li><li><a class="a-table" target="_blank" href="https://github.com/lory98">lory98</a> for 3ds-steelhax-encrypter</li><li><a class="a-table" target="_blank" href="https://github.com/wwylele">wwylele</a> for 3ds-save-tool</li><li><a class="a-table" target="_blank" href="https://github.com/figgyc">figgyc</a> for seedhelper</li><li>My guinea pigs for testing</li><li>All developers working on the linked apps &amp; emulators</li><li>And everybody else I forgot to mention</li></ul><hr></div><div class="col-lg-2"></div></div></body></html>
+<html data-crowd-bypass-opt-in="">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Steelminer</title>
+    <meta name="description" content="Steelminer: Steelhax combined with Seedminer">
+    <meta property="og:image" content="https://i.imgur.com/CVSu1zc.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/Steelminer_files/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/Steelminer_files/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/Steelminer_files/jquery-3.3.1.min.js.download"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/Steelminer_files/bootstrap.bundle.min.js.download"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/Steelminer_files/main.js.download"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/Steelminer_files/fileAccess.js.download"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/Steelminer_files/util.js.download"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/Steelminer_files/injection.js.download"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/Steelminer_files/msed.js.download"></script>
+    <!--script(src='/javascripts/startup.js')-->
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <h1 class="mt-5 h1-page-title text-center">Steelminer</h1>
+            <h2>What is this?</h2>
+            <p>Steelhax is an entrypoint for the 3DS and combined with Seedminer it's a primary one.
+                It enables free Homebrew access <strong>not Custom Firmware (CFW)</strong>. The uses are pretty limited, since many homebrew apps don't work on any *hax entrypoint.
+                There is a list at the bottom of the with working apps.<br>
+                If you want a full custom firmware for free, finish the guide below and then continue with
+                <a class="a-table" target="_blank" href="https://jisagi.github.io/FrogminerGuide/">Frogminer</a>.<br>
+                Other possible ways to get full custom firware are
+                <a class="a-table" target="_blank" href="https://jisagi.github.io/SeedminerGuide/">Seedminer</a> or
+                <a class="a-table" target="_blank" href="https://3ds.hacks.guide/ntrboot">ntrboot</a>.</p>
+            <h2>What do I need?</h2>
+            <ul>
+                <li>A legal copy of "Steel Diver: Sub Wars"</li>
+            </ul>
+            <h2>FAQ</h2>
+            <ul>
+                <li><strong>Q:</strong> Can I launch FBI with steelhax? <strong>A:</strong> No</li>
+                <li><strong>Q:</strong> Can I install/play game backups with this? <strong>A:</strong> No</li>
+                <!--li #[u #[strong Q:] Seedhelper is down or not working. What do i do? #[strong A:] You wait for it being back up!]-->
+                <li><strong>Q:</strong> I found this guide on youtube and something doesn't work. What do i do? <strong>A:</strong> You go message that youtuber and ask them for help.</li>
+            </ul>
+            <div class="alert alert-danger" style="color:#d72828;"><strong>If you already installed Luma3DS you can ignore this guide, because it will not work. This is only for non cfw users</strong></div>
+            <hr>
+            <h2 id="Section_I">Section I - Getting your ID0</h2>
+            <ol>
+                <li>Power off your 3DS</li>
+                <li>Insert your SD Card into your PC and open the <code>Nintendo 3DS</code> folder</li>
+                <li>You will now find one or multiple folders with 32-character-long names</li>
+                <li>If you only have one then skip this step</li>
+                <ul>
+                    <li>Navigate one folder up so you can see the <code>Nintendo 3DS</code> folder again</li>
+                    <li>Rename your <code>Nintendo 3DS</code> folder to <code>Nintendo BACKUP</code> by right-clicking it and selecting "Rename"</li>
+                    <li>Put the SD Card back into your 3DS and power it on</li>
+                    <li><strong>Wait</strong> for it to generate its data on your SD Card</li>
+                    <li>Power off your 3DS and insert the SD Card back into your PC</li>
+                    <li>Open the <code>Nintendo 3DS</code> folder</li>
+                </ul>
+                <li>You should now see one folder with a 32-character-long name (see picture below).
+                    <br><strong>The name of this folder is your ID0</strong></li><img src="https://maxcdn.bootstrapcdn.com/bootstrap/Steelminer_files/1AeECFF.png">
+                <li>If you did <strong>NOT</strong> skip step 4, delete the <code>Nintendo 3DS</code> folder and rename the <code>Nintendo BACKUP</code> folder back to <code>Nintendo 3DS</code></li>
+            </ol>
+            <hr>
+            <h2 id="Section_II">Section II - Getting your movable.sed</h2>
+            <p>Choose <strong>one</strong> of the following options. If one doesn't work, try the other one.</p>
+            <h3>The automated way</h3>
+            <ol>
+                <li>Open <a class="a-table" target="_blank" href="https://bruteforcemovable.com/">this website</a></li>
+                <li>Input your Friend Code and your ID0</li>
+                <li>Click "Go" and then add the displayed Friend Code on your system</li>
+                <li>Wait until it finishes retrieving your <code>movable_part1.sed</code></li>
+                <li>When finished click "Continue" to let one of the online miners brute-force your <code>movable.sed</code></li>
+            </ol>
+            <h3>The manual way</h3>
+            <ol>
+                <li><a class="a-table" target="_blank" href="https://discord.gg/C29hYvh">Join our discord server</a>
+                    and ask in our 3ds-assistance channels if someone has the time to help you get the <code>movable_part1.sed</code>.
+                    Tell them you are going to brute-force yourself. You might receive a file named <code>XX_XXXX-XXXX-XXXX_part1.sed</code>,
+                    just rename it to <code>movable_part1.sed</code>. Please have your Friend Code ready when asking for help!</li>
+                <li>Open a command prompt by typing <code>cmd</code> into the start menu search bar and pressing Enter</li>
+                <li>In the new black window, type <code>py -3 --version</code></li>
+                <ul>
+                    <li>If it reports <code>Python 3.x.x</code>, you have Python 3</li>
+                    <li>If it complains, you either have Python 2 or no Python at all</li>
+                    <ul>
+                        <li>Go to <a class="a-table" target="_blank" href="https://www.python.org/downloads/">python.org</a> and download and
+                            install the most recent Python 3 version, then redo this part to confirm it worked</li>
+                    </ul>
+                </ul>
+                <li>Download the latest release of Seedminer <a class="a-table" target="_blank" href="https://github.com/zoogie/seedminer/releases">from here</a>
+                    and extract the zip file</li>
+                <li>Move <code>movable_part1.sed</code> into the <code>seedminer</code> folder you just extracted, where the <code>seedminer_launcher3.py</code> script is</li>
+                <li>Hold SHIFT and right click on an empty space in the <code>seedminer</code> folder, then select <code>Open PowerShell window here</code> or
+                    <code>Open command window here</code></li>
+                <li>Type <code>py -3 seedminer_launcher3.py update-db</code> into the new window</li>
+                <li>Wait for it to finish, then type <code>py -3 seedminer_launcher3.py id0 YOUR ID0 HERE</code> - replace <code>YOUR ID0 HERE</code>
+                    with your ID0 you got in Section I</li>
+                <ul>
+                    <li><strong>Note:</strong> If you downloaded your <code>movable_part1.sed</code> from seedhelper then your ID0 is already added.
+                        You should recieve the error "improper ID0 length or already in file"</li>
+                </ul>
+                <li>Depending on what you want to use type the following:</li>
+                <ul>
+                    <li>GPU <code>py -3 seedminer_launcher3.py gpu</code> (preferred, use CPU if you only have integrated graphics!)</li>
+                    <li>CPU <code>py -3 seedminer_launcher3.py cpu</code> <strong>(This can take a while!)</strong></li>
+                </ul>
+                <p><strong>Troubleshoot:</strong><br>
+                    If you encounter "bfcl is not recognized as an internal or external command [...]" then your anti-virus may have removed bfcl.exe.
+                    Disable it temporarily and re-extract the files from the seedminer archive<br>
+                    If it only generated a <code>movable_part2.sed</code> with no other error or action, then update your graphics card drivers and try again</p>
+                <li>After it finishes, you will have a <code>movable.sed</code></li>
+            </ol>
+            <hr>
+            <h2 id="Section_III">Section III - Creating the Save File</h2>
+            <ol>
+                <li>Upload your <code>movable.sed</code> and select your region below</li>
+                <li>Click "Start!" and wait for your savefile to download</li>
+                <ul>
+                    <li><strong>Recommended browsers are Chrome &amp; Firefox, others might not work</strong></li>
+                </ul>
+            </ol>
+            <form action="javascript:start();" id="uploadForm" ref="uploadForm" enctype="multipart/form-data">
+                <div class="form-group"><label>movable.sed:</label><input class="form-control form-control-movable" id="movable" type="file" accept=".sed"></div>
+                <div class="form-group"><label>Region:</label><select class="form-control form-control-region" id="region" style="width: 150px">
+                        <option value="00040000000d7d00" selected="">USA</option>
+                        <option value="00040000000d7e00">Europe</option>
+                        <option value="00040000000d7c00">Japan</option>
+                    </select></div><button class="btn btn-primary btn-start" type="submit">Start!</button>
+            </form>
+            <p id="p-error"></p>
+            <hr>
+            <h2 id="Section_IV">Section IV - Finalizing</h2>
+            <ol>
+                <li>Download the
+                    <a class="a-table" target="_blank" href="https://github.com/VegaRoXas/vegaroxas.github.io/raw/master/files/steelhax-installer.rar">Steelhax Installer</a>
+                    archive</li>
+                <li>Download the <a class="a-table" target="_blank" href="http://smealum.github.io/3ds/#otherapp">otherapp payload</a>
+                    corresponding to your system version and rename it to <code>payload.bin</code></li>
+                <li>Download the
+                    <a class="a-table" target="_blank" href="https://github.com/fincs/new-hbmenu/releases/download/v2.0.0/boot.3dsx">latest Version of the Homebrew Menu</a></li>
+                <li>Extract the <code>steelhax-installer.rar</code> and copy the <code>steelhax</code> <strong>folder</strong> directly to your SD Card (not into any other folder!)</li>
+                <li>Copy <code>payload.bin</code> into the <code>steelhax</code> folder on your SD Card</li>
+                <li>Copy <code>boot.3dsx</code> (Homebrew Menu) to the root of your SD Card</li>
+                <li>Start the game once and select a Mii to initialize the save. <strong>Do not update the game when asked!</strong></li>
+                <ul>
+                    <li>If you already updated the game, delete the Update Data in the System Settings</li>
+                </ul>
+                <li>Close the game, power off your 3DS and insert your SD Card into your PC</li>
+                <li>Replace the existing save in <code>Nintendo 3DS &gt; ID0 &gt; ID1 &gt; title &gt; 00040000 &gt; regionId &gt; data</code> (regionId see below) with the one you
+                    got in Section II</li>
+                <ul>
+                    <li>US: <code>000d7d00</code></li>
+                    <li>Europe: <code>000d7e00</code></li>
+                    <li>Japan: <code>000d7c00</code></li>
+                </ul>
+                <li>Create a folder called <code>3ds</code> on the root of your SD Card</li>
+                <ul>
+                    <li>You can add your .3dsx apps to this folder later</li>
+                </ul>
+                <li>Reinsert the SD Card into your 3DS and power it on</li>
+                <li>Start the game</li>
+            </ol>
+            <div class="p-box">You should now boot into the Homebrew Menu. If not, check the Troubleshooting below or ask on our <a class="a-table" target="_blank" href="https://discord.gg/C29hYvh">Discord Server</a></div>
+            <hr>
+            <h2 id="Troubleshooting">Troubleshooting</h2>
+            <ul>
+                <li>
+                    <h5>I get a solid yellow screen</h5>
+                </li>
+                <p>Relaunch the game. It might take a few tries (You might need to force shut off the system be holding the power button)</p>
+                <li>
+                    <h5>I get a solid red screen</h5>
+                </li>
+                <p>The <code>boot.3dsx</code> is missing. Download it <a class="a-table" target="_blank" href="https://github.com/fincs/new-hbmenu/releases/download/v2.0.0/boot.3dsx">here</a> and put it on the root of your SD Card</p>
+                <li>
+                    <h5>I get a solid black screen</h5>
+                </li>
+                <p>You already have Luma3DS. Check by booting while holding (Select)</p>
+                <li>
+                    <h5>The game crashed with an error message</h5>
+                </li>
+                <p>Check if you have the <code>/steelhax/</code> folder and the correct <code>payload.bin</code></p>
+                <li>
+                    <h5>The game crashed without an error message</h5>
+                </li>
+                <p>The <code>payload.bin</code> inside the <code>/steelhax/</code> folder has the wrong system version (old or new 3/2ds)</p>
+                <li>
+                    <h5>The game booted normally</h5>
+                </li>
+                <p>You did not patch or overwrite the original savefile.</p>
+            </ul>
+            <hr>
+            <h2 id="Apps">Usable Applications</h2>
+            <p>There is no guarantee all of the listed apps work on all systems!</p>
+            <ul>
+                <li><a class="a-table" href="http://steelminer.jisagi.net/files/JKSM.zip">JKSM</a> for save import/export</li>
+                <li><a class="a-table" href="https://github.com/BernardoGiordano/PKSM/releases">PKSM</a> for Pokemon save editing
+                    (extract the <code>hax</code> folder from the <code>PKSM.zip</code> into your <code>3ds</code> folder on your SD Card)</li>
+                <li><a class="a-table" href="https://github.com/astronautlevel2/Anemone3DS/releases">Anemone3DS</a> for custom themes (the .3dsx file)</li>
+                <li>Emulators (not all games work and performance may vary)</li>
+                <ul>
+                    <li><a class="a-table" href="http://steelminer.jisagi.net/files/Snes9x_3ds.zip">snes_9x</a></li>
+                    <li><a class="a-table" href="http://steelminer.jisagi.net/files/mGBA.zip">mgba</a></li>
+                    <li><a class="a-table" href="http://steelminer.jisagi.net/files/GameYob.zip">GameYob</a></li>
+                    <li><a class="a-table" href="http://steelminer.jisagi.net/files/VirtuaNES.zip">VirtuaNES</a></li>
+                </ul>
+            </ul>
+            <hr>
+            <h2 id="Credits">Credits</h2>
+            <ul>
+                <li><a class="a-table" target="_blank" href="https://github.com/zoogie">zoogie</a> for seedminer</li>
+                <li><a class="a-table" target="_blank" href="https://github.com/VegaRoXas">VegaRoXas</a> for steelhax</li>
+                <li><a class="a-table" target="_blank" href="https://github.com/lory98">lory98</a> for 3ds-steelhax-encrypter</li>
+                <li><a class="a-table" target="_blank" href="https://github.com/wwylele">wwylele</a> for 3ds-save-tool</li>
+                <li><a class="a-table" target="_blank" href="https://github.com/figgyc">figgyc</a> for seedhelper</li>
+                <li>My guinea pigs for testing</li>
+                <li>All developers working on the linked apps &amp; emulators</li>
+                <li>And everybody else I forgot to mention</li>
+            </ul>
+            <hr>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</body>
+
+</html>
