@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<title>Easy seedminer B9S CFW</title>
-<link rel="shortcut icon" href="https://gitcdn.xyz/repo/dw-hb/3dscfw/guide/seed.ico" type="image/x-icon" />
+<title>Frogminer B9S CFW</title>
+<link rel="shortcut icon" href="https://gitcdn.xyz/repo/dw-hb/3dscfw/img/seed.ico" type="image/x-icon" />
 
 <head>
   <meta charset="utf-8">
@@ -70,37 +70,122 @@
       embed.emit('sendMessage', 'Hello world')
     })*/
   </script>
+  <style>
+      #frogSteps {
+	      display: block;
+	  }
+      #frogSteps td {
+	      display: inline-block;
+		  width: 80px;
+		  height: 60px;
+		  background-color: grey;
+		  margin: 2px;
+	  }
+	  .FNinner {
+	      position: relative;
+		  width: 100%;
+		  height: 100%;
+	  }
+	  .FNinfo {
+	      position: absolute;
+		  width: 100%;
+		  height: 0;
+		  text-align: center;
+	  }
+	  .FNbtn {
+	      background-color: orange;
+		  position: absolute;
+	  }
+	  .FNbtnB {
+		  width: 33%;
+		  height: 10%;
+		  top: 90%;
+		  left: 33%;
+      }
+	  .FNbtnRH {
+	      width: 20%;
+		  height: 33%;
+		  top: 40%;
+		  right: 20%;
+	  }
+	  .FNbtnOK {
+		  width: 28%;
+		  height: 10%;
+		  top: 80%;
+		  left: 36%;
+      }
+	  .FNbtnBL {
+	      width: 30%;
+		  height: 10%;
+		  top: 90%;
+		  left: 15%;
+	  }
+	  .FNbtnLO {
+	      width: 28%;
+		  height: 34%;
+		  top: 28%;
+		  left: 5%;
+	  }
+	  .FNbtnSD {
+	      width: 25%;
+		  height: 25%;
+		  bottom: 15%;
+		  right: 15%;
+	  }
+	  .FNbtnP {
+	      width: 25%;
+		  height: 25%;
+		  top: 10%;
+		  left: 10%;
+	  }
+	  .FNbtnPC {
+	      width: 38%;
+		  height: 10%;
+		  bottom: 0;
+		  right: 0;
+	  }
+	  .FNbtnF {
+	      width: 20%;
+		  height: 10%;
+		  top: 0;
+		  left: 20%;
+	  }
+	  .FNbtnFG {
+	      width: 25%;
+		  height: 35%;
+		  bottom: 25%;
+	  }
+	  .FNbtnF1 {
+		  right: 25%;
+	  }
+	  .FNbtnF2 {
+		  right: 0;
+	  }
+  </style>
 </head>
 
 <body>
   <h1>
-    <p>Seedminer Boot9Strap CFW the easy way (+ bonus features)</p><small>A tutorial for people who just want to <i>get it done.</i></small>
+    <p>Steelminer Froghax Boot9Strap CFW the easy way (+ bonus features)</p><small>A tutorial for people who just want to <i>get it done.</i></small>
   </h1>
   <div class="guide">
     <div class="busy msg bdr br end">
-      <h2 class="ctr">This guide being updated as more information about 11.8 is released!</h2>
-      <p class="br">Latest changes:</p>
-      <ul class="txtli">
+      <h2 class="ctr">Latest changes and information</h2>
+      <ul>
         <li>
-		  Changed link of b9stool for 11.8; 4.0.2 is no longer available, providing 5.0.0 instead.
-		  <ul>
-		    <li><span class="hl3">The <code>boot.nds</code> file for 11.8 is no longer provided directly; it must be extracted with an archive manager.</span></li>
+		  Removed legacy information since there's no reason <b>not</b> to update your console.
+		    <ul>
+			  <li>Unless you have a modchip. In which case YMMV, sucks to be you!</li>
+			</ul>
+		<li><span class="hl3">The <code>boot.nds</code> file for 11.9 is no longer provided directly; it must be extracted with an archive manager.</span></li>
 		</li>
       </ul>
     </div>
     <div class="good msg bdr br ctr end">
-      <h2>Some people may find this guide confusing to follow.</h2>
-      <p class="br">I get it. If you are doing this stuff for the first time, you may be uncertain about what you are doing, despite the content laid out before you optimized to waste as little of your time and bandwidth as possible. If you are confused, ask the person who provided this guide to you for additional consultation and advice.</p>
-      <p>Much confusion can be had by "Skimming" the contents of this guide. <i>Do not "Skim", "Scan" or otherwise half-read contents of this guide.</i></p>
-      <p class="br"><span class="hl3">Every word has a purpose, and treating each word of this guide with equal respect and time will ensure you do not trip over yourself and break your console in the process.</span></p>
-      <h2>It's okay to be afraid.</h2>
-      <p class="br">If you are feeling uncertain about doing this, or uneasy about following certain steps, it is reasonable to feel fear and anxiety. You are performing actions which would invalidate whatever warranty Nintendo has extended to your device, in exchange for additional features enabled by use of third-party software. There is also a chance of being banned from Nintendo's servers for online play, but there are ways and means around that which are not in the scope of this guide and it is <i>very</i> unlikely the act of having custom firmware by itself would be cause for a ban. Don't cheat or otherwi se subvert game rules and you'll be fine.</p>
-      <h2>Following these steps correctly, <i>you will not brick.</i></h2>
-      <p class="br">Along with the uncertainty about future participation in online titles, people are concerned about <i>bricking</i>; the incapability of using your console because of a software or hardware fault. This shouldn't happen. Everything shown below is to be followed procedurally, and while there may be alternative steps shown for doing certain things, it is only for acquisition of files needed to modify your console; the act of doing it remains the same, no matter what, and has been performed on countless thousands of handhelds covered in this guide.</p>
-      <h2>You may feel overwhelmed while reading this</h2>
-      <p class="br">There is <i>a lot</i> of stuff here, which is why it is broken down in steps and sections. Take it one step at a time, from top-to-bottom. In an hour or two you will finish this, and you will succeed should you not deviate from any of the critical steps necessary for softmodding the console. <span class="hl3">If you feel pressed for time, <i><u>stop</u></i>:</span> Instead of rushing to finish this under a time limit, bookmark this page and read this later. Look for the blue seed and access said bookmark later to continue reading later.</p>
-      <h2>"Oh my goodness, this is a lot of reading."</h2>
-      <p>Yeah, I know it's pretty involved. Just <i>deal with it</i> and read. <span class="hl3">If you skipped to this immediately, <i><u>stop</u></i>: read all contents in this box from the beginning.</span> If you'd rather voice assistance or need to make sure you are doing everything correctly, feel free to initiate a video chat in Discord for sharing your display and use voice communications for enhanced assistance.</p>
+      <h2>This use to be a big block of text.</h2>
+      <p class="br">...But it's boiled down to this. <span class="hl3">Consider each word in this guide important, follow at a comfortable pace, don't rush through reading, don't skim through sections, and you <i>won't</i> brick your 3DS.</span> It's that simple. Take your time, and you'll complete this in a half-hour if you work through this reasonably fast. <b>That isn't to say this is a time challenge.</b> Custom firmware is not a race, it's a journey.</p>
+	  <p class="br">If you feel overwhelmed at all while reading this, that's fine. It is why you are advised to take it slow and study this guide before proceeding. You will be acting upon steps you may be uncomfortable with. <i>this is fine</i> and nothing shown here will end up bricking your console. <span class="hl3">If you don't feel like doing a lot of reading, <b>too bad.</b> <i>I cannot stress the importance of taking your time enough.</i></span>
+	  <p>In summary; It's really, <i>really</i> hard to brick your console. <span class="hl3">And if you fail that bad, it's <b>your</b> fault.</span></p></p>
     </div>
     <div class="info msg bdr br"><a href="https://discord.gg/MWxPgEp">For help with most Nintendo Homebrew things, there's a Discord guild for that.</a> This guide is not associated with them, but you can join there anyway for general inqueries.</div>
     <div class="info msg bdr br">If you are interested in free games and other topics Nintendo Homebrew may outright ban you for, ask whoever gave you this page about another guild more open to that kind of discussion. Otherwise, you'll be finished with this guide at section 5.</div>
@@ -108,61 +193,64 @@
       <h2>Preface and summary</h2>
     </a>
     <div class="ins">
-      <div class="warn msg bdr br">This guide is intended for use with <i>completely stock</i> 3DS consoles using firmware 11.4 - 11.8. <span class="hl3">Following these instructions with an Arm9LoaderHax-modified console will brick the console.</span> <u>Don't even try.</u> Future firmware <i>may</i> not brick the console; if given an update <i>before modding</i>, don't accept until it is certain the software provided is functional for the latest firmware version.</div>
+      <div class="warn msg bdr br">This guide is intended for use with <i>completely stock</i> 3DS consoles using firmware 11.9. <span class="hl3">Following these instructions with an Arm9LoaderHax-modified console will brick the console.</span> <u>Don't even try.</u> Future firmware <i>may</i> not brick the console. You must update to the latest firmware version if prompted, as the console requires access to the Nintendo eShop.</div>
       <div class="info msg bdr br">Any reference to 3DS also applies for 2DS, meaning that regardless of model these instructions will apply.</div>
       <div class="good msg bdr">After completing these instructions, it is safe to update Boot9Strap, Luma3DS and the console firmware.</div>
       <div class="body end">
         <p>There are several guides about this particular method of custom firmware already on the Internet. If you want to see those, ask about them in Nintendo Homebrew. If you want a <i>better</i> interpretation of this method optimized for speed and limited handling of media, then read on. The reason this guide exists is because I grew tired of telling people the same turns of phrase which serve to do nothing more than waste time and confuse people who cannot keep up with what I am saying, and for me to link so people can follow along with the same series of instructions which haven't failed any persons I had assisted as of yet. As lots of people just want to <i>get it done</i>, if you find yourself in the same camp then this guide is for you.</p>
         <h3>After having followed these instructions, these contents will be in your 3DS' SD card:</h3>
-        <h4>System software</h4>
+        <h4>CFW payloads</h4>
         <ul>
           <li><b>Boot9Strap</b>, a loader for ARM9 / ARM11.</li>
           <li><b>Luma3DS</b>, a custom firmware (hereon: <i>CFW</i>) which depends upon Boot9Strap (hereon: <i>B9S</i>) or ARM9LoaderHax (hereon: <i>A9LH</i>).</li>
           <li><b>GodMode9</b>, a file manager and root-level script executor dependent on Luma3DS' payload execution.</li>
         </ul>
-        <h4>User software</h4>
+        <h4>System-resident applications</h4>
         <table>
           <tr>
-            <th><img src="https://api.titledb.com/images/0004000000D59100.png"></th>
-            <td><b>DSP1</b><br>a dumping utility to support sound for homebrew applications.</td>
+            <th><img src="https://gitcdn.xyz/cdn/dw-hb/3dscfw/img/dsp1.png"></th>
+            <td><b>DSP1</b><br>Dumping utility to support sound for homebrew applications.</td>
           </tr>
           <tr>
-            <th><img src="https://api.titledb.com/images/00040000001DEB00.png"></th>
-            <td><b>Luma3DS Updater</b><br>a utility for updating Luma3DS through the console when new releases are available.</td>
+            <th><img src="https://gitcdn.xyz/cdn/dw-hb/3dscfw/img/lupd.png"></th>
+            <td><b>Luma3DS Updater</b><br>Utility for updating Luma3DS through the console when new releases are available.</td>
           </tr>
           <tr>
-            <th><img src="https://api.titledb.com/images/000400000D921E00.png"></th>
-            <td><b>Homebrew Launcher</b><br>a utility for launching programs compiled as <code>.3dsx</code> binaries.</td>
+            <th><img src="https://gitcdn.xyz/cdn/dw-hb/3dscfw/img/hbl.png"></th>
+            <td><b>Homebrew Launcher</b><br>Utility for launching programs compiled as <code>.3dsx</code> binaries.</td>
           </tr>
           <tr>
-            <th><img src="https://api.titledb.com/images/000400000F800100.png"></th>
-            <td><b>FBI</b><br>a utility for using CTR Importable Archive binaries (hereon: <i>CIA</i>) to install games and applications.</td>
+            <th><img src="https://gitcdn.xyz/cdn/dw-hb/3dscfw/img/fbi.png"></th>
+            <td><b>FBI</b><br>Utility for using CTR Importable Archive binaries (hereon: <i>CIA</i>) to install games and applications.</td>
           </tr>
           <tr>
-            <th><img src="https://api.titledb.com/images/00040000000AFE00.png"></th>
-            <td><b>Anemone Theme Manager</b><br>an open-source utility for installing themes and bootsplashes.</td>
+            <th><img src="https://gitcdn.xyz/cdn/dw-hb/3dscfw/img/atm.png"></th>
+            <td><b>Anemone Theme Manager</b><br>Open-source utility for installing themes and bootsplashes.</td>
           </tr>
           <tr>
-            <th><img src="https://api.titledb.com/images/000400000BCFFF00.png"></th>
-            <td><b>Checkpoint</b><br>a save manager for 3DS and DSiWare titles.</td>
+            <th><img src="https://gitcdn.xyz/cdn/dw-hb/3dscfw/img/chkp.png"></th>
+            <td><b>Checkpoint</b><br>Save manager for 3DS and DSiWare titles.</td>
+          </tr>
+        </table>
+		<h4>Media-resident applications</h4>
+		<table>
+          <tr>
+            <th><img src="https://gitcdn.xyz/cdn/dw-hb/3dscfw/img/frog.png"></th>
+            <td><b>Frogtool</b><br>Utility to dump, patch and execute patched DS Download Play for froghax</td>
+          </tr>
+          <tr>
+            <th><img src="https://gitcdn.xyz/cdn/dw-hb/3dscfw/img/hbld.png"></th>
+            <td><b>CTR No Time Offset</b><br>System clock synchronization utility</td>
           </tr>
         </table>
         <h3>The following websites may be utilized:</h3>
         <ul>
           <li><a href="https://bruteforcemovable.com"><b>Bruteforce Movable</b></a> for remote use of seedminer using volunteer machines.</li>
-          <li><a href="https://jenkins.nelthorya.net/job/DSIHaxInjector/"><b>Jenkins (Project DSIHaxInjector)</b></a> for compiling your CFW entrypoint.</li>
+		  <li><a href="http://steelminer.jisagi.net/#Section_III"><b>Jisagi's Steelminer guide</b></a> (<i>Section III</i>) for generating your Steelminer save data file.
           <li><a href="https://3ds.hacks.guide/finalizing-setup"><b>3DS Hacks Guide's "Finalizing Setup"</b></a> page for finishing up and use of other software.</li>
-        </ul>
-        <h3>The following GodMode9 scripts may also be executed:</h3>
-        <ul>
-          <li><code>setup_ctrnand_luma3ds</code>, a script which will copy Luma3DS into system memory so the console isn't dependent on the presence of an SD card.</li>
-          <li><code>cleanup_sd_card</code>, a script to delete unnecessary files for operation, including the cias directory which will be included with the archive provided.</li>
-          <li>The built-in script for backing up the system memory entirely as a file on SD card.</li>
         </ul>
         <h3>The following additional steps can also be performed after installation of CFW:</h3>
         <ul>
-          <li>Installation of <b>FTPD</b>, an FTP server for 2DS / 3DS.</li>
-          <li>Installation of <b>Freeshop</b>, an open-source clone of Nintendo's eShop with title management.</li>
           <li>Installation of <b>InputRedirectionClient-Qt</b> for use of Luma3DS' input redirection, a feature to use controllers attached to a PC.</li>
           <li>Installation of <b>Snickerstream</b> for casting video from the console onto PC.</li>
         </ul>
@@ -177,29 +265,26 @@
       </ul>
     </div>
     <a class="item section" id="title1">
-      <h2>Section 1 — Preparation</h2>
+      <h2>Section 1 - Preparation</h2>
     </a>
     <div class="ins">
       <div class="body end">
-        <p>Before beginning to attempt softmodding the console, you should make <b>really</b> sure you have everything necessary for a successful installation. Without any of the content detailed below, <u>you will fail.</u> Don't bother advancing until having followed these steps.</p>
+        <p>Before attempting to softmod the console, you should make <b>really</b> sure you have everything necessary for a successful installation. Without any of the content detailed below, <u>you will fail.</u> Don't bother advancing until having followed these steps.</p>
         <h3>You will need the following</h3>
         <ul>
-          <li>USD3 (or regional equivalent) in your Nintendo eShop account.</li>
-          <li>A stock 3DS or 2DS, old or new.</li>
+          <li>Access to the Nintendo eShop.</li>
+          <li>A Mii registered on the console. created through Mii Maker</li>
+		  <li>Your console's friend code found on the first card in Friend List.</li>
+		  <li>System version in System Settings (just in case).</li>
         </ul>
         <h3>Optionally, this may help</h3>
         <ul class="br">
           <li>A computer with a GPU permitting use of 4GB or more of video memory (VRAM).</li>
-          <li>Python 3.6 (preferably) or 2.7.</li>
+          <li>Python 3.7 (preferably) or 2.7.</li>
           <li>Another person to assist with their modified console for seedstarter.
             <ul>
               <li>Ask someone who already had their console modified.</li>
               <li><span class="hl1">No friends? No problem! So long Bruteforce Movable is available that can also be used.</span></li>
-            </ul>
-          </li>
-          <li>A gift card for purchasing eCash if lacking a bank account.
-            <ul>
-              <li>This can be a Nintendo eCash card, or a gift card for services which permit purchase of Nintendo eCash.</li>
             </ul>
           </li>
           <li>An SD card larger than 4GB.
@@ -212,64 +297,51 @@
             </ul>
           </li>
         </ul>
-        <p class="br">Because of recent happenings with the console, you will need to know what firmware version you are using. This guide is a general work for all versions past 11.3, but you will need to understand what firmware version the console uses as that will influence what files you need for a successful operation.</p>
-        <p>If you are using 11.8 or greater, using files intended for version 11.7 <i>will not work</i>; You need files for <i>that specific version</i> to be successful, and if you happen to be 11.8, you cannot use your custom firmware to acquire games you do not have legal rights to acquire (as of yet) if you are installing custom firmware for that purpose. If you are using 11.7, <span class="hl3"><u>do not update.</u></span></p>
+        <p class="br">While this guide only supports 11.8 and greater (as Nintendo may not prompt for update on 11.8 to use the eShop), ideally if you already have Steel Diver: Sub Wars installed this should work on almost any version past 11.3. However, just to be on the safe side upgrade to 11.9 _anyway_ since on a stock console this shouldn't cause any problems, and you'll only need to download the _latest_ version of b9stool rather than root about in zoogie's repository for an older revision of the installer for previous firmware.</p>
+		<p class+"br">Just to be perfectly clear, <span class="hl3">there is no reason to <i>not</i> use 11.9 for this.</span></p>
       </div>
     </div>
     <a class="item section" id="title2">
-      <h2>Section 2 — Initial steps</h2>
+      <h2>Section 2 - Initial steps</h2>
     </a>
     <div class="ins">
       <div class="info msg bdr">If you have to, go into Windows Explorer's options and disable hiding of known file extensions. As it is beyond the scope of this guide, search for this information yourself.</div>
       <div class="body end">
-        <p>After having fulfilled everything in the above section, only <i>then</i> are you ready to begin without encountering any future difficulties. Unlike other guides online, this one provides a single archive providing a <i>universal</i> set of files <b>up to 11.8</b>.</p>
+        <p>After having fulfilled everything in the above section, only <i>then</i> are you ready to begin without encountering any future difficulties. Unlike other guides online, this one provides a single archive providing a <i>universal</i> set of files <b>up to 11.9</b>.</p>
         <h3>On the console</h3>
         <ol>
           <li>Open the Nintendo eShop.</li>
-          <li><a href="https://3ds.hacks.guide/installing-boot9strap-(dsiware-game-injection-list)">
-              Purchase an injectable game from this list.</a></li>
+          <li>Search for Steel Diver: Sub Wars, then install it.</li>
+          <li>Exit the eShop and open Steel Diver: Sub Wars.
           <ul>
-            <li><b>Keep that page open;</b> Information from it may help you later.</li>
-            <li>If you aren't sure, purchase SUDOKU. The file generated with the process below will be <code>4B344445.bin</code> (USA) or <code>4B344456.bin</code> (EUR). There is no SUDOKU equivalent for JPN but any of the listed games for that region will work.</li>
+            <li><b>Do not update it!</b> You will be told an update is available, <b>do not</b> accept it or Steelhax will not work.</li>
           </ul>
           </li>
-          <li>Exit the eShop and open System Settings; Go to Data Management, DSiWare.</li>
-          <li>Find your compatible title and copy it onto the SD card. <i>Permit this operation in the following prompt.</i></li>
-          <li>Power off the Nintendo 3DS and remove the SD card.
+          <li>Get to any point in the game where save data is created. This is for later steps.</li>
+          <li>Power off the Nintendo 3DS and <b>remove the SD card.</b>
             <ul>
-              <li>If you own a console with the "new" wordmark, you can do one better: Go into microSD Management and connect with your PC instead.</li>
+              <li>If you own a console with the "new" wordmark, you may be able to do one better: Go into microSD Management and attempt to access the SD card with your PC instead.</li>
             </ul>
           </li>
         </ol>
         <h3> On the computer</h3>
         <ol>
           <li>Insert the 3DS' SD card into another device which permits you to manipulate files directly (PC, tablet, smartphone etc.).</li>
-          <li><a href="https://gitcdn.xyz/repo/dw-hb/ar/suite/seedkit.zip">Download this archived suite of files. (<code>seedkit.zip</code>)</a>
+          <li><a href="https://gitcdn.xyz/repo/dw-hb/ar/suite/frogkit.zip">Download this archived suite of files. (<code>frogkit.zip</code>)</a>
             <ul>
               <li>All version-agnostic files in this archive were obtained from 3ds.hacks.guide and have already been assembled in the correct fashion for execution on the 3DS.</li>
             </ul>
-            <li>Extract the contents of the archive onto the root of the SD card.
+            <li>Place the contents of the archive onto the root (top directory level) of the SD card.
               <ul>
-                <li>This means all directories and files should be <i>alongside</i> Nintendo 3DS, not <i>inside</i> of it, and especially <i>not</i> in its own directory.</li>
+                <li>This means all directories and files should be <i>alongside</i> Nintendo 3DS, not <i>inside</i> of it, and especially <i>not</i> in its own directory. If everything ended up in a directory called <code>frogkit</code> instead, access it, select all and cut, moving the contents to top level.</li>
               </ul>
             </li>
-            <li>Download the following <i>additional</i> files depending on your firmware version:
-              <ul>
-                <li class="txtli"><code>11.4 - 11.7:</code> <a href="https://github.com/zoogie/b9sTool/releases/download/v4.0.0/boot.nds">B9STool v4.0.0</a>
-				  <ul class="intl">
-				    <li>If you already have a compatible DSiWare title, <i class="hl3">do not update the system firmware!</i> Any future instructions to update <i>should be ignored.</i></li>
-					<li><span class="hl3">This file should be saved directly to your console's SD card.</span></li>
-			      </ul>
-				</li>
-                <li class="txtli"><code>11.8 onward:</code> <a href="https://github.com/zoogie/b9sTool/releases/download/v5.0.0/release_5.0.0.zip">B9STool v5.0.0</a>
-                  <ul class="intl">
-                    <li><span class="hl3">v5.0.0 is <i>not</i> compatible with 11.7 or less!</span></li>
-					<li>If you didn't have a compatible DSiWare title already, you may be forced to update the system firmware which makes this the <i>only</i> option.</li>
-					<li><span class="hl3"><b>This is an archive.</b> Extract this to the root of your console's SD card.</span></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
+            <li>Visit <a href="http://smealum.github.io/3ds/#otherapp">this page</a> and provide it the system firmware version from the 3DS' System Settings.<ul>
+			  <li>For example; if your console bears the "New" wordmark and running latest firmware, you would select from each field so it reads as <b>NEW 11 9 0 42 [R]</b>.<ul>
+			    <li><span class="hl3">Remember: This only works for EUR and USA consoles! This means for [R], replace with U or E.</span></li>
+				</ul>
+			  </ul>
+			</li>
             <li>Navigate to <code>Nintendo 3DS</code>; you should see two directories.
               <ul>
                 <li>If you see more than two, search for the filename of the game you had copied, per the list you may had previously obtained it from. Results should show one entry in <code>Nintendo 3DS/[id0]/[id1]/Nintendo DSiWare</code>.</li>
@@ -278,7 +350,7 @@
             <li>Copy your id0.
               <ul>
                 <li>It is <i>the name of</i> the 32-character directory alongside <code>Private</code>.</li>
-                <li><i>Example:</i> <code class="hl1">4a5b6c7d8effe0d1c2b3aa9b0c1d2e3f</code></li>
+                <li><i>Example:</i> <code class="hl1">5a6b7c8d9eafb1c2d3e4f50617283940</code></li>
                 <li>You can use your file manager's rename function to copy it. <b>Keep it somewhere in case you need to copy it multiple times.</b></li>
               </ul>
             </li>
@@ -313,7 +385,7 @@
       </div>
     </div>
     <a class="item section" id="title3">
-      <h2>Section 3 — Seedminer</h2>
+      <h2>Section 3 - Seedminer</h2>
     </a>
     <div class="ins">
       <a class="item option good msg ctr">
@@ -323,19 +395,18 @@
         <div class="good msg end">
           <p class="br">You can use <a href="https://bruteforcemovable.com">Bruteforce Movable</a> instead of following most of this section. To use this service:</p>
           <ol class="br">
-            <li>Obtain your part1 from somebody else with a modified console
-              <ul>
-                <li>While you can <i>try</i> to obtain your part1 using this service, rumour claims it doesn't always yield good results.</li>
-              </ul>
+            <li>Power on the Nintendo 3DS without the SD card, then open the Friend List application.</li>
+			<li>Supply Bruteforce Movable your console's ID0 and friend code.
+			<ul>
+			  <li>If part1 acquisition via local friend code seed is broken server-side, you may need to obtain your part1 from somebody else with a modified console.</li>
+			</ul>
             </li>
-            <li>Provide your console's id0
-              <ul>
-                <li>Your id0 was obtained earlier; you should still have it per instructions in <a href="https://dw-hb.github.io/3dscfw/basic.html?section=2#title2">section 2.</a></li>
-              </ul>
+            <li>Provide your console's id0 as explained in <a href="https://dw-hb.github.io/3dscfw/basic.html?section=2#title2">section 2</a> of this guide.
             </li>
-            <li>Press <i>Start</i> and wait.</li>
+            <li>Press <i>Start</i>, add Brandon to your friend list and wait. It should only take a few minutes.</li>
           </ol>
           <p>You may be waiting a long while for this depending on queue (shown in the blue heading on top), so if you have an nVidia GTX 960 or equivalent, try mining your own seed instead!</p>
+		  <p>Once finished, <b>don't forget to download the <code>movable.sed</code> generated via Bruteforce Movable to your console's SD card!</b>
         </div>
       </div>
       <p class="br">
@@ -387,7 +458,7 @@
       </div>
       <div class="info msg bdr br">If Bruteforce Movable is down and somebody else needs to mine for you, your id0 needs to be provided to them for a successful operation.</div>
       <a class="item option info msg ctr">
-        <h3>If you only have Python 2.7, expand this to view command substitutions.</h3>
+        <h3>If you only have Python 2.7 for Windows, expand this to view command substitutions.</h3>
       </a>
       <div class="nestins">
         <div class="info msg end">
@@ -408,7 +479,7 @@
           <li>Execute <code>py -3 seedminer_launcher3.py update-db</code>.</li>
           <li>Execute <code>py -3 seedminer_launcher3.py id0 [id0]</code>.
             <ul>
-              <li><i>Example:</i> <code>py -3 seedminer_launcher3.py id0 <span class="hl1">4a5b6c7d8effe0d1c2b3aa9b0c1d2e3f</span></code>.</li>
+              <li><i>Example:</i> <code>py -3 seedminer_launcher3.py id0 <span class="hl1">5a6b7c8d9eafb1c2d3e4f50617283940</span></code>.</li>
               <li>If you are confused about what your id0 is, see <b><a href="https://dw-hb.github.io/3dscfw/basic.html?section=2#title2">section 2</a></b>.
             </ul>
           </li>
@@ -419,106 +490,167 @@
             </ul>
           </li>
           <li>If nothing produced fatal errors, multiple <code>cmd</code> instances will open: <b>Do not close them.</b></li>
-          <li>Obtain your movable.sed from the directory seedminer was executed in.</li>
+          <li>Once finished <i>and successful</i>, move <code>movable.sed</code> from the seedminer directory to the SD card.
+		      <ul>
+			      <lI>This is necessary for later steps involving Homebrew Channel.</li>
+			  </ul>
+		  </li>
         </ol>
       </div>
     </div>
     <a class="item section" id="title4">
-      <h2>Section 4 — DSiWare injection</h2>
+      <h2>Section 4 - Froghax</h2>
     </a>
     <div class="ins">
       <div class="warn msg bdr">None of these steps are of any use without your <code>movable.sed</code>. Acquire it from Bruteforce Movable or make it yourself in seedminer (see <a href="https://dw-hb.github.io/3dscfw/basic.html?section=3#title3">section 3</a>).</div>
-      <div class="body end">
+      <div class="body">
         <p>These series of steps are necessary for producing your CFW entrypoint. Without it, the additional software on your SD card is rendered useless.</p>
         <h2>At your computer</h2>
         <ol>
-          <li><a href="https://jenkins.nelthorya.net/job/DSIHaxInjector/build?delay=0sec">Go to this website to build your patched bin.</a></li>
-          <li>The fields shown refer to the following:
+		  <li>Extract the complete contents of <code>frogkit.zip</code> to your console's SD card.</li>
+          <li>Execute URL file <code>Open for Steelhax exploit</code> to create the save exploit for accessing Homebrew Launcher</li>
+		  <li>Provide the website that URL file opens your <code>movable.sed</code> and start patching.</li>
+          <li><i>Save as</i> for the generated <code>00000001.sav</code> to the SD card in <code>Nintendo 3DS\[ID0]\[ID1]\title\00040000\[regionID]\data</code>.
             <ul>
           </li>
-          <li>Unique identifier for the patched <code>.bin</code> file.</li>
-          <li>Region of your console (usually shown on your console).</li>
-          <li>Location of your copied DSiWare <code>.bin</code>.</li>
-          <li>Location of your <code>movable.sed</code>.</li>
-          <li>You can skip E-Mail: Build will not take long.</li>
-          </ul>
-          </li>
-          <li>Hit the big blue <b>Build</b> button and watch the left side for your build to complete.
-            <ul>
-              <li class="txtli">🔵 means build completed with a usable artifact.</li>
-              <li class="txtli">🔴 means the <code>movable.sed</code> or <code>.bin</code> file was bad and needs to be remade.</li>
-            </ul>
-          </li>
-          <li>If you see your build is successful, click it and download the artifact made onto your SD card in <code>Nintendo DSiWare</code>.</li>
-          <li>Rename, move or delete the the original, untouched <code>.bin</code> file.</li>
-          <li>Rename the <code>.patched</code> file so it ends in <code>.bin</code> instead.
-            <ul>
-              <li>The previous three steps are intended to overwrite your game with a modified copy which launches b9stool.</li>
-            </ul>
-          </li>
-          <li><i>Properly</i> eject the SD card from your PC and put it in the console.</li>
+          <li><code>[ID0]</code> is whatever you used as part of making your <code>movable.sed</code> earlier.</li>
+          <li><code>[ID1]</code> is within <code>[ID0]</code>, and there should only be <b>one</b> directory therein.</li>
+          <li><code>[regionID]</code> is any three of the following depending on system region:
+		    <ul>
+		      <li><b>USA:</b> <code>000d7d00</code></li>
+			  <li><b>EUR:</b> <code>000d7e00</code></li>
+			  <li><b>JPN:</b> <code>000d7c00</code> (but Froghax won't help you here, Squirrelhax should be used instead.)</li>
+			</ul>
+	        </ul>
+		  </li>
+		  <li><a href="">Execute either of the URL files for B9Stool depending on system version:</a>
+		    <ul>
+			  <li>If you're on 11.8, execute <code>Open for b9stool in 11.8.0-41</code>.</li>
+			  <li>If you're on 11.9, execute <code>Open for b9stool in 11.9.0-42</code>.</li>
+			</ul>
+	      </li>
+		  <li>Execute <code>Open for Steelhax payload</code>and do the following:
+		    <ol>
+			  <li>Fill in the system firmware veersion using the information you obtained from System Settings earlier</li>
+			  <li>Choose to <i>Download otherapp</i> as this is the payload required for Steelhax</li>
+			  <li><i>Save as</i> to the SD card in the <code>steelhax</code> directory.</li>
+			</ol>
+		  </li>
         </ol>
-        <h2>At your console</h2>
-        <ol>
-          <li>Open System Settings, Data Management, DSiWare.</li>
-          <li>In the SD Card tab, choose to copy the patched bin to System Memory. <i>Permit this operation in the following prompt.</i></li>
-          <li>When finished, exit to Home Menu and open the patched game.</li>
-        </ol>
-      </div>
-    </div>
-    <a class="item section" id="title5">
-      <h2>Section 5 — CFW installation</h2>
-    </a>
-    <div class="ins">
-      <a class="item option info msg ctr">
-        <h3>Expand for a final reminder about file arrangement.</h3>
+	</div>
+	      <a class="item option info msg ctr">
+        <h3>Expand for a tree view of files which should be on the SD card.</h3>
       </a>
       <div class="nestins">
         <div class="info msg end">
-          <p class="br">This ia a tree view of the files and directories given from <code>seedkit.zip</code> after they had been extracted, excluding <code>Nintendo 3DS</code> and other extraneous directories: If you do not have this archive, get it from <a href="https://dw-hb.github.io/3dscfw/basic.html?section=2#title2">section 2</a>.</p>
-          <p class="br"><i>All operations shown later will <u>fail</u> if files from <code>seedkit.zip</code> are not arranged as shown <u>at the root directory of your SD card.</u></i></p>
+          <p class="br">This ia a tree view of the files and directories given from <code>frogkit.zip</code> after they had been extracted, excluding <code>Nintendo 3DS</code> and other extraneous directories: If you do not have this archive, get it from <a href="https://dw-hb.github.io/3dscfw/basic.html?section=2#title2">section 2</a>.</p>
+          <p class="br"><i>All operations shown later will <u>fail</u> if files from <code>frogkit.zip</code> are not arranged as shown <u>at the root directory of your SD card.</u></i></p>
           <div class="inset">
           <pre>[Your SD card]
-│   boot.3dsx
-│   boot.firm
-│   boot.nds
-│   boot9strap.firm
-│
-├───3ds
-│       FBI.3dsx
-│
-├───cias
-│       Anemone3DS.cia
-│       Checkpoint.cia
-│       DSP1.cia
-│       FBI.cia
-│       hblauncher_loader.cia
-│       lumaupdater.cia
-│
-├───gm9
-│   ├───scripts
-│   │       Backup EmuNAND.gm9
-│   │       Backup SysNAND.gm9
-│   │       cleanup_sd_card.gm9
-│   │       Restore EmuNAND.gm9
-│   │       Restore SysNAND (Full).gm9
-│   │       Restore SysNAND (Safe).gm9
-│   │       setup_ctrnand_luma3ds.gm9
-│   │
-│   └───support
-│           aeskeydb.bin.here
-│           encTitleKeys.bin.here
-│           seeddb.bin.here
-│
-└───luma
-    └───payloads
-GodMode9.firm</pre>
+?   boot.3dsx
+?   boot.firm
+?   boot.nds
+?   frogcert.bin
+?   Frogtool.3dsx
+?   Open for b9stool in 11.8.0-41.url
+?   Open for b9stool in 11.9.0-42.url
+?   Open for Steelhax exploit.url
+?   Open for Steelhax payload.url
+?
+????3ds
+?       ctr-no-timeoffset.3dsx
+?       FBI.3dsx
+?       ftpd.3dsx
+?
+????cias
+?       Anemone3DS.cia
+?       Checkpoint.cia
+?       DSP1.cia
+?       FBI.cia
+?       ftpd.cia
+?       Homebrew_Launcher.cia
+?       lumaupdater.cia
+?
+????gm9
+?   ????scripts
+?   ?       GM9Megascript.gm9
+?   ?       NANDManager.gm9
+?   ?
+?   ????support
+?           aeskeydb.bin.here
+?           encTitleKeys.bin.here
+?           seeddb.bin.here
+?
+????luma
+?   ????payloads
+?           GodMode9.firm
+?
+????steelhax
+        code.bin
+        rop.bin</pre>
           </div>
+		<p>The directory <code>private</code> will be created at SD root when frogtool is ran for the very first time. <code>frogcert.bin</code> and <code>movable.sed</code> should also be at the root of the SD card.</p>
         </div>
       </div>
+	<div class="body end">
+		<h2 class="nobr">At your console</h2>
+		<ol class="br">
+		    <li>Open Steel Diver: Sub Wars</li>
+			<li>Steelhax will open Homebrew Launcher
+			    <ul>
+				    <li>If you're stuck on a certain colour during self-test, it may indicate the following:
+					    <ul class="txtli">
+						    <li><span class="hl3"><b>Yellow screen:</b></span> Crash; try again.</li>
+						    <li><span class="hl5"><b>Red screen:</b></span> <code>boot.3dsx</code> is missing (which should had come with <code>frogkit.zip</code>).</li>
+							<li><b>Black screen:</b> Luma3DS is already installed; Check by holding <code>Select</code> while powering on.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Open Frogtool
+			    <ul>
+				    <li>If this fails, <code>movable.sed</code> should be in SD card root. If not, return to Homebrew Channel and open FTPD so you can use FilzZilla or other system-specific solution for transferring that file to the top level of the SD card.</li>
+				</ul>
+			</li>
+			<li>Follow button presses in order as shown:<br><i>Display size and button locations approximated: <b>not to scale.</b></i></li>
+		</ol>
+		<table id="frogSteps" class="br">
+		    <tr>
+			    <td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo">1<br>Press button</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo">2<br>Press again</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnRH"></div><div class="FNinfo">3<br>Right hand</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnOK"></div><div class="FNinfo">4<br>Press OK</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo">5<br>Press button</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo">6<br>Press again</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnBL"></div><div class="FNinfo">7<br>Press left button</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnBL"></div><div class="FNinfo">8<br>Press again</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo">9<br>Press button</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo">10<br>Press again</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnOK"></div><div class="FNinfo">11<br>Press OK</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnLO"></div><div class="FNinfo">12<br>Left option</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnSD"></div><div class="FNinfo">13<br>SD card</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnP"></div><div class="FNinfo">14a<br>Select project</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnPC"></div><div class="FNinfo">14b<br>Modify project</div></div></td>
+				<td><div class="FNinner"><div class="FNinfo">15<br>Press D-pad up</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnF"></div><div class="FNinfo">16<br>Film button</div></div></td>
+				<td><div class="FNinner"><div class="FNinfo">17a<br>Press D-pad right twice</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnFG FNbtnF1"></div><div class="FNinfo">17b<br>Select Copy</div></div></td>
+				<td><div class="FNinner"><div class="FNinfo">17c<br>Press D-pad left twice</div></div></td>
+				<td><div class="FNinner"><div class="FNbtn FNbtnFG FNbtnF2"></div><div class="FNinfo">17d<br>Select Paste</div></div></td>
+			</tr>
+		</table>
+		<ol start="5">
+		    <li>Continus to section 5.</li>
+		</ol>
+      </div>
+    </div>
+    <a class="item section" id="title5">
+      <h2>Section 5 - CFW installation</h2>
+    </a>
+    <div class="ins">
       <div class="body">
       </div>
-      <div class="good msg bdr br">If having followed instructions elsewhere which mandated creation of a <code>boot9strap</code> directory, you can delete that prior to extracting <code>seedkit.zip</code> because b9stool can use contents from SD card root.</div>
+      <div class="good msg bdr br">If having followed instructions elsewhere which mandated creation of a <code>boot9strap</code> directory, you can delete that prior to extracting <code>frogkit.zip</code> because b9stool can use contents from SD card root.</div>
       <div class="info msg bdr br">Instructions below shamelessly ripped off from <a href="https://jisagi.github.io/SeedminerGuide/injection/#section4">Jisagi's seedminer guide</a></div>
       <div class="warn msg bdr">These instructions will fail without following <a href="https://dw-hb.github.io/3dscfw/basic.html?section=4#title4">section 4</a>.</div>
       <div class="body">
@@ -527,21 +659,12 @@ GodMode9.firm</pre>
           <!--Break for consistency.-->
         </p>
         <ol class="nobr">
-          <li>Launch b9sTool by starting your DSiWare game
-            <ul>
-              <li>It is alright if it loads SUDOKU, just proceed when allowed.</li>
-            </ul>
-          </li>
-          <li>Launch b9sTool by starting your DSiWare game.</li>
-          <li><span class="hl3">Select <code>Dump F0F1</code> to backup the 3DS FIRM.</span>
-            <ul>
-              <li>This is important; In the case Rosalina menu doesn't show in later steps you will want to restore firm0, which b9stool writes to.</li>
-            </ul>
-          </li>
-          <li>Select <code>Install boot9strap</code> and confirm.</li>
-          <li>Wait for it to say <code>done!</code>. Exit b9sTool and continue to Luma3DS configuration.<ul>
-              <li>If your 3DS reboots normally then boot9strap did not install correctly. Replace your prep files with freshly downloaded files and restore the F0F1 backup in b9sTool. <b>Do not create a new F0F1 backup!</b> Then try reinstalling boot9strap again.</li>
-              <li>You can return here later while the 3DS is turned off by holding <code>Select</code> whilepowering on.</li>
+          <li>Follow previous section to completion
+          <li>Choose <code>Install Boot9Streap</code></li><li>Select <code>Install boot9strap</code> and confirm.</li>
+          <li>Wait for it to say <code>done!</code>. Exit b9sTool and continue to Luma3DS configuration.
+		  <ul>
+              <li>If your 3DS reboots normally then boot9strap did not install correctly. Visit the file tree in section 4 (click the big bliue banner) and make sure everything there is on your SD card!</li>
+              <li>You can return here later while the 3DS is turned off by holding <code>Select</code> while powering on.</li>
             </ul>
           </li>
           <li>Use the <code>A</code> button and the D-pad to enable the following options:
@@ -572,86 +695,16 @@ GodMode9.firm</pre>
       <div class="good msg bdr">If you've completed what is shown here, including this section (and the finalizing setup page in 3ds.hacks.guide) then congratulations! You've completed this guide and need to do nothing else for enjoying the fruits of your labour. However, as many people enjoy a good bonus the two sections after this are for better utilizing the features of your custom firmware and expanding its functionality.</div>
     </div>
     <a class="item section" id="title6">
-      <h2>Section 6 — Other 3DS software</h2>
+      <h2>Section 6 - Other 3DS software</h2>
     </a>
     <div class="ins">
-      <div class="warn msg bdr br">Certain circles do not dare discuss piracy. As some places may ban you for talking about it, <span class="hl3">don't bring up freeShop.</span> <i>Ever.</i></div>
-      <div class="warn msg bdr hl3">Because of recent changes to Nintnedo's ticket validation, freeShop only works best with DLC and updates, and even then nothing is guaranteed.</div>
-      <div class="body end">
-        <p>There is some other cool software you can install via FBI's TitleDB menu. As there is no additional preparation necessary, This section should be fairly straight-forward, especially compared with the long-winded process which permits the installation of such software. When finished, you will have <b>FTPD</b> and <b>Freeshop</b> made available to you. There is a <b>lot</b> of other software via TitleDB but the two mentioned are what may be considered most useful for games, patches and remote interaction with the SD card.</p>
-      </div>
+      <div class="warn msg bdr br">Certain circles do not dare discuss piracy. As some places may ban you for talking about it, <span class="hl3">don't bring up piracy software, ever.</span> <i>Ever.</i></div>
+      <div class="warn msg bdr br hl3">Because of recent changes to Nintnedo's ticket validation, games installed via FBI may not be able to use updates without deleting a title's installation ticket while an update is pending first. After which, you'll need to reinstall the game as without a ticket, digital titles are not available.</div>
       <div class="info msg bdr">If you only want one of the software shown below, follow instructions explicitly for that software only.</div>
-      <div class="body br">
-        <h2 class="nobr">Software installation</h2>
-        <ol>
-          <li>Open FBI, and navigate to <code>TitleDB</code>.<ul>
-              <li>To navigate through the list faster, left and right act as page up and page down respectively.</li>
-              <li>For multiple entries in TitleDB, the bottom-most one is usually the latest.</li>
-              <li>When prompted, FBI will provide two options for installation. As follows;<ul>
-                  <li class="txtli"><code>CIA</code>: Installs to system memory and creates a shortcut in Home Menu.</li>
-                  <li class="txtli"><code>3DSX</code>: installs to <code>3ds</code> on SD card, only accessible through the Homebrew Launcher.</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Scroll to the F's, select and download the following two applications:<ul>
-              <li class="txtli"><code>freeShop</code>
-                <ul>
-                  <li class="intl">As <code>CIA</code> is the only option shown here, freeShop will install to system memory.</li>
-                </ul>
-              </li>
-              <li class="txtli"><code>ftpd</code>
-                <ul>
-                  <li class="intl">If you do not see <code>ftpd</code>, scroll to the S's, select and download <code>Super ftpd ii turbo</code>.</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Exit FBI and unwrap your gifts.</li>
-        </ol>
-        <h2>Freeshop configuration</h2>
-        <ol>
-          <li>Open Freeshop.
-            <ul>
-              <li>As TitleDB installs 4.1.0 which was released around Halloween, Bernard Herrmann's <i>The Murder</i> score from Psycho plays instead of Freeshop's default splash music.</li>
-            </ul>
-          </li>
-          <li>After the change log, tap on the gear (⚙️) to access settings.</li>
-          <li>Select the <code>Update</code> tab and perform the following:
-            <ol>
-              <li>Enable <code>Auto-update title keys from URL</code>.</li>
-              <li>Tap on the keyboard (⌨️) which becomes available.</li>
-              <li>Give the input box this address: <code class="hl3" ;>http://3ds.titlekeys.gq/downloadenc</code>.</li>
-            </ol>
-          </li>
-          <li>Once finished, select <code>Refresh Cache</code> and enjoy unfettered access to over 4000 games.</li>
-        </ol> Or, you can continue to look in settings at the following tabs:
-        <ul>
-          <li class="txtli"><code>Filter</code>: Adjust what titles are displayed based on region, genre, language, origin platform and publisher.
-            <ul>
-              <li>The <code>Feature</code> tab has nothing, and crashes the console. Don't bother.</li>
-            </ul>
-          </li>
-          <li class="txtli"><code>Sort</code>: Adjust how games are sorted by release date, name, size, rating or vote tally.</li>
-          <li class="txtli"><code>Inactivity</code>: Adjust which screens and features are disabled after a specified timeout.</li>
-        </ul>
-      </div>
-      <a class="item option info msg ctr">
-        <h3>Problems with adding title keys? Expand this.</h3>
-      </a>
-      <div class="nestins">
-        <div class="info msg end">
-          <p class="br">Because of ongoing issues with persons unable to use the QR code from <a href="http://3ds.titlekeys.gq">this repository</a> which hosts the domain shown above, an alternative for persons with no success following the above is to perform as shown:</p>
-          <ol class="br">
-            <li>If applicable, launch freeShop to generate necessary directories for operation.</li>
-            <li><a href="http://3ds.titlekeys.gq/downloadenc">Download <code>encTitleKeys.bin</code></a></li>
-            <li>Save <code class="hl3">encTitleKeys.bin</code> to the 3DS' SD card at <code>3ds/data/freeShop/keys</code>
-          </ol>
-          <p>When finished, you should be able to see the application load a game list and show available titles.</p>
-        </div>
-      </div>
       <div class="body end">
-        <h2 class="nobr">Wireless transfer via FTP</h2>
+	    <h2 class="nobr">Acquisition of other software</h2>
+	    <p>Unfortunately, because of recent happenings with Nintendo's ticket system and the people behind TitleDB resigning their duty as index maintainers, <i>and</i> with FBI having removed TitleDB in its latest revision of the software all of the "Good stuff" which led to easy gaming is kind of down the drain. You can still use FBI for installing software via the <b>SD</b> menu, and a variety of applications you can install via the <b>Remote Install</b> function can be installed via QR code available from <a href="https://tinydb.eiphax.tech/">TinyDB</a>.
+        <h2 class="br">Wireless transfer via FTP</h2>
         <ol>
           <li>Open your computer's FTP client.
             <ul>
@@ -662,25 +715,16 @@ GodMode9.firm</pre>
           <li>Open FTPD on the 3DS.</li>
           <li>At the top of the screen, IP and port are shown. As follows, this information is used in the two fields on Filezilla:
             <ul>
-              <li>IP address goes into the<b>Host</b> field.</li>
-              <li>Port goes into the<b>Port</b> field (with FTPD's default being <code>5000</code>).</li>
+              <li>IP address goes into the <b>Host</b> field.</li>
+              <li>Port goes into the <b>Port</b> field (with FTPD's default being <code>5000</code>).</li>
             </ul>
           </li>
           <li>To exit after file transfers had completed, press <code>B</code> twice.</li>
         </ol>
       </div>
     </div>
-    <a class="item section" id="title7">
-      <h2>Section 7 — MIgration and backup</h2>
-    </a>
-    <div class="ins">
-      <div class="body end">
-        <p>[Critical error: 11.8 has been released, this section to be finished later.]</p>
-        <p>[Include information about how to create <code>essential.exefs</code> in GodMode9.]</p>
-      </div>
-    </div>
     <a class="item section" id="title8">
-      <h2>Section 8 — 3DS operation from PC</h2>
+      <h2>Section 7 - 3DS operation from PC</h2>
     </a>
     <div class="ins">
       <div class="warn msg bdr br">Input redirection features, until otherwise rectified is easily installable for Windows machines only.</div>
