@@ -694,13 +694,76 @@
       </div>
       <div class="good msg bdr">If you've completed what is shown here, including this section (and the finalizing setup page in 3ds.hacks.guide) then congratulations! You've completed this guide and need to do nothing else for enjoying the fruits of your labour. However, as many people enjoy a good bonus the two sections after this are for better utilizing the features of your custom firmware and expanding its functionality.</div>
     </div>
-    <a class="item section" id="title6">
-      <h2>Section 6 — Other 3DS software</h2>
+	<a class="item section" id="title6">
+      <h2>Section 6 — Post-install cleanup</h2>
+    </a>
+    <div class="ins">
+	  <div class="body end">
+	  <p class="br">After following finalization steps from 3DS Hacks Guide, you should do the following in this section to clean up your console. Not doing so, you'll end up with Steel Diver: Sub Wars being non-functional <i>as a game</i> and DS Download Play (not the 3DS iteratino of DS Download Play) opening JPN Flipnote Studio. To resolve this, do the following:</p>
+	  <ol class="br">
+	    <li>Open Homebrew Channel
+		  <ul>
+		    <li>If you had not already, follow its on-screen instructions to enable.</li>
+		  </ul>
+		</li>
+		<li>Launch frogtool</li>
+		<li>Choose to restore clean DS Download Play.</li>
+		<li>Exit Frogtool, then return to home menu.</li>
+		<li>(Optional) Use System Settings to delete your Steel Diver: Sub Wars save.
+		  <ul>
+		    <li>If you don't do this, you can perform this step later manually, in GodMode9.</li>
+		  </ul>
+		</li>
+	  </ol>
+	  <p>As I am too lazy to codify a cleanup script of my own for use in GodMode9, this set of instructions will do. It will be assumed you're in GM9 at this point so instructions will be for navigating there, but if you're accessing the SD card via FTP or interacting with it directly, then the paths and files shown can be repurposed for following instructions using your file manager / explorer.</p>
+	  <ol class="br">
+	    <li>Navigate to 0:</li>
+		<li>Press <code>L</code> to select the following files:
+		  <ul>
+		    <li><code>Open for b9stool in 11.8.0-41.url</code></li>
+			<li><code>Open for b9stool in 11.9.0-42.url</code></li>
+			<li><code>Open for Steelhax exploit.url</code></li>
+			<li><code>Open for Steelhax payload.url</code></li>
+			<li><code>0:/steelhax</code></li>
+			<li><code>0:/private</code></li>
+		  </ul>
+		</li>
+		<li>Press <code>X</code>
+		  <ul>
+		    <li>Confirm delete</li>
+		  </ul>
+		</li>
+		<li>Highlight and select with <code>A</code> <code>0:/3DS</code></li>
+		<li>Press <code>L</code> to select the following files:
+		  <ul>
+		    <li><code>frogtool.3dsx</code></li>
+			<li><code>ctr-no-timeoffset.3dsx</code></li>
+		  </ul>
+		</li>
+		<li>Press <code>X</code>
+		  <ul>
+		    <li>Confirm delete</li>
+		  </ul>
+		</li>
+		<li>Press <code>B</code>
+		<li>Highlight and select with <code>A</code> the following path (Starting from <code>0:/</code>)<br>
+		<code>Nintendo 3DS/[ID0]/[ID1]/title/00040000/[regionID]/data</code>
+		</li>
+		<li>Highlight <code>00000001.sav</code> and press <code>X</code>
+		  <ul>
+		    <li>Confirm delete.</li>
+		  </ul>
+		</li>
+	  </ol>
+	  <p>That should do it for cleanup! After you should be able to launch Steel Diver: Sub Wars and use, ffor some reason or another DS Download Play.</p>
+	  </div>
+	</div>
+    <a class="item section" id="title7">
+      <h2>Section 7 — Other 3DS software</h2>
     </a>
     <div class="ins">
       <div class="warn msg bdr br">Certain circles do not dare discuss piracy. As some places may ban you for talking about it, <span class="hl3">don't bring up piracy software, ever.</span> <i>Ever.</i></div>
-      <div class="warn msg bdr br hl3">Because of recent changes to Nintnedo's ticket validation, games installed via FBI may not be able to use updates without deleting a title's installation ticket while an update is pending first. After which, you'll need to reinstall the game as without a ticket, digital titles are not available.</div>
-      <div class="info msg bdr">If you only want one of the software shown below, follow instructions explicitly for that software only.</div>
+      <div class="warn msg bdr hl3">Because of recent changes to Nintnedo's ticket validation, games installed via FBI may not be able to use updates without deleting a title's installation ticket while an update is pending first. After which, you'll need to reinstall the game as without a ticket, digital titles are not available.</div>
       <div class="body end">
 	    <h2 class="nobr">Acquisition of other software</h2>
 	    <p>Unfortunately, because of recent happenings with Nintendo's ticket system and the people behind TitleDB resigning their duty as index maintainers, <i>and</i> with FBI having removed TitleDB in its latest revision of the software all of the "Good stuff" which led to easy gaming is kind of down the drain. You can still use FBI for installing software via the <b>SD</b> menu, and a variety of applications you can install via the <b>Remote Install</b> function can be installed via QR code available from <a href="https://tinydb.eiphax.tech/">TinyDB</a>.
@@ -724,7 +787,7 @@
       </div>
     </div>
     <a class="item section" id="title8">
-      <h2>Section 7 — 3DS operation from PC</h2>
+      <h2>Section 8 — 3DS operation from PC</h2>
     </a>
     <div class="ins">
       <div class="warn msg bdr br">Input redirection features, until otherwise rectified is easily installable for Windows machines only.</div>
