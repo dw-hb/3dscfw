@@ -9,6 +9,7 @@
   <link href="https://gitcdn.xyz/cdn/dw-hb/global/css/adb_myriadPro.css" rel="stylesheet">
   <link href="https://gitcdn.xyz/cdn/dw-hb/global/css/base.css" rel="stylesheet">
   <link href="https://gitcdn.xyz/cdn/dw-hb/global/css/fancy.css" rel="stylesheet">
+  <link href="https://gitcdn.xyz/cdn/dw-hb/global/css/frog.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
   </script>
@@ -70,98 +71,6 @@
       embed.emit('sendMessage', 'Hello world')
     })*/
   </script>
-  <style>
-      #frogSteps {
-	      display: block;
-	  }
-      #frogSteps td {
-	      display: inline-block;
-		  width: 80px;
-		  height: 60px;
-		  background-color: grey;
-		  margin: 2px;
-	  }
-	  .FNinner {
-	      position: relative;
-		  width: 100%;
-		  height: 100%;
-	  }
-	  .FNinfo {
-	      position: absolute;
-		  width: 100%;
-		  height: 0;
-		  text-align: center;
-	  }
-	  .FNbtn {
-	      background-color: orange;
-		  position: absolute;
-	  }
-	  .FNbtnB {
-		  width: 33%;
-		  height: 10%;
-		  top: 90%;
-		  left: 33%;
-      }
-	  .FNbtnRH {
-	      width: 20%;
-		  height: 33%;
-		  top: 40%;
-		  right: 20%;
-	  }
-	  .FNbtnOK {
-		  width: 28%;
-		  height: 10%;
-		  top: 80%;
-		  left: 36%;
-      }
-	  .FNbtnBL {
-	      width: 30%;
-		  height: 10%;
-		  top: 90%;
-		  left: 15%;
-	  }
-	  .FNbtnLO {
-	      width: 28%;
-		  height: 34%;
-		  top: 28%;
-		  left: 5%;
-	  }
-	  .FNbtnSD {
-	      width: 25%;
-		  height: 25%;
-		  bottom: 15%;
-		  right: 15%;
-	  }
-	  .FNbtnP {
-	      width: 25%;
-		  height: 25%;
-		  top: 10%;
-		  left: 10%;
-	  }
-	  .FNbtnPC {
-	      width: 38%;
-		  height: 10%;
-		  bottom: 0;
-		  right: 0;
-	  }
-	  .FNbtnF {
-	      width: 20%;
-		  height: 10%;
-		  top: 0;
-		  left: 20%;
-	  }
-	  .FNbtnFG {
-	      width: 25%;
-		  height: 35%;
-		  bottom: 25%;
-	  }
-	  .FNbtnF1 {
-		  right: 25%;
-	  }
-	  .FNbtnF2 {
-		  right: 0;
-	  }
-  </style>
 </head>
 
 <body>
@@ -616,27 +525,27 @@
 		</ol>
 		<table id="frogSteps" class="br">
 		    <tr>
-			    <td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo">1<br>Press button</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo">2<br>Press again</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnRH"></div><div class="FNinfo">3<br>Right hand</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnOK"></div><div class="FNinfo">4<br>Press OK</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo">5<br>Press button</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo">6<br>Press again</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnBL"></div><div class="FNinfo">7<br>Press left button</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnBL"></div><div class="FNinfo">8<br>Press again</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo">9<br>Press button</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo">10<br>Press again</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnOK"></div><div class="FNinfo">11<br>Press OK</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnLO"></div><div class="FNinfo">12<br>Left option</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnSD"></div><div class="FNinfo">13<br>SD card</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnP"></div><div class="FNinfo">14a<br>Select project</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnPC"></div><div class="FNinfo">14b<br>Modify project</div></div></td>
-				<td><div class="FNinner"><div class="FNinfo">15<br>Press D-pad up</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnF"></div><div class="FNinfo">16<br>Film button</div></div></td>
-				<td><div class="FNinner"><div class="FNinfo">17a<br>Press D-pad right twice</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnFG FNbtnF1"></div><div class="FNinfo">17b<br>Select Copy</div></div></td>
-				<td><div class="FNinner"><div class="FNinfo">17c<br>Press D-pad left twice</div></div></td>
-				<td><div class="FNinner"><div class="FNbtn FNbtnFG FNbtnF2"></div><div class="FNinfo">17d<br>Select Paste</div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo"><p>1</p><small>Press button</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo"><p>2</p><small>Press again</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnRH"></div><div class="FNinfo"><p>3</p><small>Right hand</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnOK"></div><div class="FNinfo"><p>4</p><small>Press OK</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo"><p>5</p><small>Press button</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo"><p>6</p><small>Press again</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnBL"></div><div class="FNinfo"><p>7</p><small>Press left button</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnBL"></div><div class="FNinfo"><p>8</p><small>Press again</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo"><p>9</p><small>Press button</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnB"></div><div class="FNinfo"><p>10</p><small>Press again</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnOK"></div><div class="FNinfo"><p>11</p><small>Press OK</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnLO"></div><div class="FNinfo"><p>12</p><small>Left option</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnSD"></div><div class="FNinfo"><p>13</p><small>SD card</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnP"></div><div class="FNinfo"><p>14a</p><small>Select project</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnPC"></div><div class="FNinfo"><p>14b</p><small>Modify project</small></div></div></td>
+          <td><div class="FNinner"><div class="FNinfo"><p>15</p><small>Press D-pad up</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnF"></div><div class="FNinfo"><p>16</p><small>Film button</small></div></div></td>
+          <td><div class="FNinner"><div class="FNinfo"><p>17a</p><small>Press D-pad right twice</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnFG FNbtnF1"></div><div class="FNinfo"><p>17b</p><small>Select Copy</small></div></div></td>
+          <td><div class="FNinner"><div class="FNinfo"><p>17c</p><small>Press D-pad left twice</small></div></div></td>
+          <td><div class="FNinner"><div class="FNbtn FNbtnFG FNbtnF2"></div><div class="FNinfo"><p>17d</p><small>Select Paste</small></div></div></td>
 			</tr>
 		</table>
 		<ol start="5">
